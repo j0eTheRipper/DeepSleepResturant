@@ -61,7 +61,7 @@
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Text = "Username";
             this.txtUsername.Enter += new System.EventHandler(this.txtBox_Enter);
-            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
+            this.txtUsername.Leave += new System.EventHandler(this.txtBox_Leave);
             // 
             // txtPassword
             // 
@@ -72,7 +72,7 @@
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "Password";
             this.txtPassword.Enter += new System.EventHandler(this.txtBox_Enter);
-            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
+            this.txtPassword.Leave += new System.EventHandler(this.txtBox_Leave);
             // 
             // Form1
             // 

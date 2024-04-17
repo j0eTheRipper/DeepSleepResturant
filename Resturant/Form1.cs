@@ -29,24 +29,15 @@ namespace Resturant
                 txtBox.PasswordChar = '*';
         }
 
-        private void txtBox_Leave(TextBox txtBox, string defaultText)
+        private void txtBox_Leave(object sender, EventArgs e)
         {
+            TextBox txtBox = (TextBox)sender;
             if (txtBox.Text == "")
             {
                 txtBox.PasswordChar = '\0';
-                txtBox.Text = defaultText;
+                txtBox.Text = txtBox.Name.Remove(0, 3);
                 txtBox.ForeColor= Color.Gray;
             }
-        }
-
-        private void txtPassword_Leave(object sender, EventArgs e)
-        {
-            txtBox_Leave(txtPassword, "Password");
-        }
-
-        private void txtUsername_Leave(object sender, EventArgs e)
-        {
-            txtBox_Leave(txtUsername, "Username");
         }
     }
 }
