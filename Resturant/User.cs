@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Resturant.Properties;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -11,7 +13,7 @@ namespace Resturant
     internal class User
     {
         public string username, password, email, role;
-        private static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\alial\\source\\repos\\Ali1767\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True;Connect Timeout=30";
+        private static string connectionString = Properties.Settings.Default.Database1ConnectionString;
         private User(string username, string password, string email, string role)
         {
             this.username = username;
@@ -20,7 +22,7 @@ namespace Resturant
             this.role = role;
         }
 
-        public User RegisterUser(string username, string password, string email, string role)
+        public static User RegisterUser(string username, string password, string email, string role)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
