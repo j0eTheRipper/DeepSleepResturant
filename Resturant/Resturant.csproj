@@ -61,11 +61,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adding_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adding_manager.Designer.cs">
+      <DependentUpon>Adding_manager.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminMainPage.Designer.cs">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chefs_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chefs_Options.Designer.cs">
+      <DependentUpon>Chefs_Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Options.Designer.cs">
+      <DependentUpon>Customer_Options.cs</DependentUpon>
     </Compile>
     <Compile Include="Database1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -78,14 +96,32 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Options.Designer.cs">
+      <DependentUpon>Manager_Options.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="Adding_manager.resx">
+      <DependentUpon>Adding_manager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMainPage.resx">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Chefs_Options.resx">
+      <DependentUpon>Chefs_Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Options.resx">
+      <DependentUpon>Customer_Options.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Options.resx">
+      <DependentUpon>Manager_Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +131,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
@@ -140,6 +177,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Premium Vector _ Handdrawn chef logo mascot delicious.jpeg" />
+    <None Include="Resources\Capture.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
