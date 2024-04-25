@@ -43,10 +43,14 @@ namespace Resturant
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (user.role == "admin")
+            user = User.Login(txtUsername.Text, txtPassword.Text);
+            if (user != null)
             {
-                AdminMainPage admin_user = new AdminMainPage();
-                admin_user.Show();
+                if (user.role == "admin")
+                {
+                    AdminMainPage admin_user = new AdminMainPage();
+                    admin_user.Show();
+                }
             }
         }
 
