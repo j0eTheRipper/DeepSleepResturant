@@ -63,19 +63,9 @@ namespace Resturant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Capture {
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_04_26_at_15_22_36_91401295 {
             get {
-                object obj = ResourceManager.GetObject("Capture", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Premium_Vector___Handdrawn_chef_logo_mascot_delicious {
-            get {
-                object obj = ResourceManager.GetObject("Premium Vector _ Handdrawn chef logo mascot delicious", resourceCulture);
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-04-26 at 15.22.36_91401295", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

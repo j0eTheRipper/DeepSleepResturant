@@ -90,6 +90,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Delet1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delet1.Designer.cs">
+      <DependentUpon>Delet1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit_username 2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_username 2.Designer.cs">
+      <DependentUpon>edit_username 2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit1.Designer.cs">
+      <DependentUpon>Edit1.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +122,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="Adding_manager.resx">
       <DependentUpon>Adding_manager.cs</DependentUpon>
@@ -117,6 +140,15 @@
     <EmbeddedResource Include="Customer_Options.resx">
       <DependentUpon>Customer_Options.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Delet1.resx">
+      <DependentUpon>Delet1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_username 2.resx">
+      <DependentUpon>edit_username 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit1.resx">
+      <DependentUpon>Edit1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,14 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </None>
@@ -177,8 +204,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\Premium Vector _ Handdrawn chef logo mascot delicious.jpeg" />
-    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\WhatsApp Image 2024-04-26 at 15.22.36_91401295.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
