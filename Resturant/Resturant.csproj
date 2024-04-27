@@ -79,6 +79,12 @@
     <Compile Include="Chefs_Options.Designer.cs">
       <DependentUpon>Chefs_Options.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerMainPage.Designer.cs">
+      <DependentUpon>CustomerMainPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer_Options.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chefs_Options.resx">
       <DependentUpon>Chefs_Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerMainPage.resx">
+      <DependentUpon>CustomerMainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer_Options.resx">
       <DependentUpon>Customer_Options.cs</DependentUpon>

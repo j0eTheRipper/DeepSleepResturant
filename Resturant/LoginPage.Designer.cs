@@ -62,6 +62,7 @@
             this.txtUsername.Size = new System.Drawing.Size(253, 38);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Text = "Username";
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             this.txtUsername.Enter += new System.EventHandler(this.txtBox_Enter);
             this.txtUsername.Leave += new System.EventHandler(this.txtBox_Leave);
             // 
@@ -76,7 +77,7 @@
             this.txtPassword.Enter += new System.EventHandler(this.txtBox_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtBox_Leave);
             // 
-            // Form1
+            // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +89,7 @@
             this.Controls.Add(this.btnLogin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Name = "Form1";
+            this.Name = "LoginPage";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
