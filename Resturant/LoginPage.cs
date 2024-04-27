@@ -74,10 +74,5 @@ namespace Resturant
                     btnLogin.Location = new Point(rnd.Next(500, 719), rnd.Next(299, 482));
             }
         }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
