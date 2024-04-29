@@ -37,26 +37,31 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Tan;
+            this.button1.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(541, 191);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(218, 46);
             this.button1.TabIndex = 0;
             this.button1.Text = "EDIT PASSWORD :";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Tan;
+            this.button2.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(286, 191);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(218, 46);
             this.button2.TabIndex = 1;
             this.button2.Text = "EDIT EMAIL :";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Tan;
+            this.button3.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(25, 191);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(218, 46);
@@ -71,7 +76,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(325, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 45);
+            this.label1.Size = new System.Drawing.Size(114, 43);
             this.label1.TabIndex = 3;
             this.label1.Text = "EDITING";
             // 

@@ -73,7 +73,7 @@
             // username_mang1
             // 
             this.username_mang1.Location = new System.Drawing.Point(403, 169);
-            this.username_mang1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.username_mang1.Margin = new System.Windows.Forms.Padding(4);
             this.username_mang1.Name = "username_mang1";
             this.username_mang1.Size = new System.Drawing.Size(225, 22);
             this.username_mang1.TabIndex = 3;
@@ -81,7 +81,7 @@
             // Password_manag1
             // 
             this.Password_manag1.Location = new System.Drawing.Point(403, 262);
-            this.Password_manag1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Password_manag1.Margin = new System.Windows.Forms.Padding(4);
             this.Password_manag1.Name = "Password_manag1";
             this.Password_manag1.Size = new System.Drawing.Size(225, 22);
             this.Password_manag1.TabIndex = 4;
@@ -89,7 +89,7 @@
             // Email_manang1
             // 
             this.Email_manang1.Location = new System.Drawing.Point(403, 362);
-            this.Email_manang1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Email_manang1.Margin = new System.Windows.Forms.Padding(4);
             this.Email_manang1.Name = "Email_manang1";
             this.Email_manang1.Size = new System.Drawing.Size(225, 22);
             this.Email_manang1.TabIndex = 5;
@@ -100,7 +100,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Uighur", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Tan;
             this.button1.Location = new System.Drawing.Point(371, 417);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(288, 48);
             this.button1.TabIndex = 6;
@@ -121,7 +121,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Adding_manager";
             this.Text = "Adding_manager";
             this.ResumeLayout(false);
