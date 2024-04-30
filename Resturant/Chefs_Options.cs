@@ -16,26 +16,5 @@ namespace Resturant
         {
             InitializeComponent();
         }
-
-        private void Add1chef_Click(object sender, EventArgs e)
-        {
-            Chef_op2 chef = new Chef_op2();
-            chef.Show();
-            this.Close();
-        }
-
-        private void Edit1chef_Click(object sender, EventArgs e)
-        {
-           Edit_chef1 chef = new Edit_chef1();
-            chef.Show();
-            this.Close();
-        }
-
-        private void Delete1chef_Click(object sender, EventArgs e)
-        {
-            DELET_CHEF dELET_CHEF = new DELET_CHEF();
-            dELET_CHEF.Show();
-            this.Close();
-        }
     }
 }

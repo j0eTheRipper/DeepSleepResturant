@@ -45,7 +45,6 @@
             this.Add1chef.TabIndex = 0;
             this.Add1chef.Text = "Add";
             this.Add1chef.UseVisualStyleBackColor = false;
-            this.Add1chef.Click += new System.EventHandler(this.Add1chef_Click);
             // 
             // Edit1chef
             // 
@@ -58,7 +57,6 @@
             this.Edit1chef.TabIndex = 1;
             this.Edit1chef.Text = "Edit";
             this.Edit1chef.UseVisualStyleBackColor = false;
-            this.Edit1chef.Click += new System.EventHandler(this.Edit1chef_Click);
             // 
             // Delete1chef
             // 
@@ -71,7 +69,6 @@
             this.Delete1chef.TabIndex = 2;
             this.Delete1chef.Text = "Delete";
             this.Delete1chef.UseVisualStyleBackColor = false;
-            this.Delete1chef.Click += new System.EventHandler(this.Delete1chef_Click);
             // 
             // label1
             // 
