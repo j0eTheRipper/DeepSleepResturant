@@ -23,5 +23,19 @@ namespace Resturant
             edit_2.Show();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Manager_password manager_Delete = new Manager_password();
+            manager_Delete.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Manager_email manager_Email = new Manager_email();
+            manager_Email.Show();
+            this.Hide();
+        }
     }
 }

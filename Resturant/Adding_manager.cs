@@ -21,5 +21,12 @@ namespace Resturant
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AdminMainPage home1 = new AdminMainPage();
+            home1.Show();
+            this.Hide();
+        }
     }
 }

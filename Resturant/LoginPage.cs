@@ -41,7 +41,7 @@ namespace Resturant
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLoginClick(object sender, EventArgs e)
         {
             user = User.Login(txtUsername.Text, txtPassword.Text);
             if (user != null)
@@ -51,7 +51,13 @@ namespace Resturant
                     AdminMainPage admin_user = new AdminMainPage();
                     admin_user.Show();
                 }
+                else if (user.role == "customer")
+                {
+                    CustomerMainPage customer_user = new CustomerMainPage();
+                    customer_user.Show();
+                }
             }
+            
         }
 
         private void btnLoginBehaviour(object sender, EventArgs e)
@@ -60,13 +66,35 @@ namespace Resturant
             user = User.Login(txtUsername.Text, txtPassword.Text);
             if (fieldsUnedited || user == null)
             {
-                Random rnd = new Random();
+                Point newLocation;
                 if (btnLogin.Location.X >= 500)
                 {
-                    btnLogin.Location = new Point(rnd.Next(0, 300), rnd.Next(299, 482));
+                    newLocation = new Point(0, 299);
                 }
                 else
-                    btnLogin.Location = new Point(rnd.Next(500, 719), rnd.Next(299, 482));
+                    newLocation = new Point(719, 299);
+
+                animateLoginbtn(newLocation);
+            }
+        }
+
+        private void animateLoginbtn(Point newLocation)
+        {
+            while (newLocation != btnLogin.Location)
+            {
+                if (newLocation.X > btnLogin.Location.X)
+                    btnLogin.Location = new Point(btnLogin.Location.X + 1, 299);
+                else
+                    btnLogin.Location = new Point(btnLogin.Location.X - 1, 299);
+            }
+        }
+
+        private void onRightCredentials(object sender, EventArgs e)
+        {
+            user = User.Login(txtUsername.Text,txtPassword.Text);
+            if (user != null)
+            {
+                animateLoginbtn(new Point(371, 299));
             }
         }
     }
