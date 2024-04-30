@@ -42,7 +42,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLoginClick);
             this.btnLogin.MouseHover += new System.EventHandler(this.btnLoginBehaviour);
             // 
             // label1
@@ -62,6 +62,7 @@
             this.txtUsername.Size = new System.Drawing.Size(253, 38);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Text = "Username";
+            this.txtUsername.TextChanged += new System.EventHandler(this.onRightCredentials);
             this.txtUsername.Enter += new System.EventHandler(this.txtBox_Enter);
             this.txtUsername.Leave += new System.EventHandler(this.txtBox_Leave);
             // 
@@ -73,6 +74,7 @@
             this.txtPassword.Size = new System.Drawing.Size(253, 38);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "Password";
+            this.txtPassword.TextChanged += new System.EventHandler(this.onRightCredentials);
             this.txtPassword.Enter += new System.EventHandler(this.txtBox_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtBox_Leave);
             // 
