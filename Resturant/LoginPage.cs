@@ -52,11 +52,6 @@ namespace Resturant
                     admin_user.Show();
                 }
             }
-            else if (user.role == "customer")
-            {
-                CustomerMainPage customer_user = new CustomerMainPage();
-                customer_user.Show();
-            }
         }
 
         private void btnLoginBehaviour(object sender, EventArgs e)
@@ -73,11 +68,6 @@ namespace Resturant
                 else
                     btnLogin.Location = new Point(rnd.Next(500, 719), rnd.Next(299, 482));
             }
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

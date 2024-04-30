@@ -67,11 +67,23 @@
     <Compile Include="Adding_manager.Designer.cs">
       <DependentUpon>Adding_manager.cs</DependentUpon>
     </Compile>
+    <Compile Include="ADDING_CUSTOMERcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADDING_CUSTOMERcs.Designer.cs">
+      <DependentUpon>ADDING_CUSTOMERcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminMainPage.Designer.cs">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chef-op2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chef-op2.Designer.cs">
+      <DependentUpon>Chef-op2.cs</DependentUpon>
     </Compile>
     <Compile Include="Chefs_Options.cs">
       <SubType>Form</SubType>
@@ -79,11 +91,17 @@
     <Compile Include="Chefs_Options.Designer.cs">
       <DependentUpon>Chefs_Options.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerMainPage.cs">
+    <Compile Include="chef_userNum.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerMainPage.Designer.cs">
-      <DependentUpon>CustomerMainPage.cs</DependentUpon>
+    <Compile Include="chef_userNum.Designer.cs">
+      <DependentUpon>chef_userNum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CUSTOMER_EMAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUSTOMER_EMAIL.Designer.cs">
+      <DependentUpon>CUSTOMER_EMAIL.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer_Options.cs">
       <SubType>Form</SubType>
@@ -91,10 +109,64 @@
     <Compile Include="Customer_Options.Designer.cs">
       <DependentUpon>Customer_Options.cs</DependentUpon>
     </Compile>
+    <Compile Include="CUSTOMER_PASSWORD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUSTOMER_PASSWORD.Designer.cs">
+      <DependentUpon>CUSTOMER_PASSWORD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CUSTOMER_USERNUM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUSTOMER_USERNUM.Designer.cs">
+      <DependentUpon>CUSTOMER_USERNUM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Delet1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delet1.Designer.cs">
+      <DependentUpon>Delet1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DELET_CHEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DELET_CHEF.Designer.cs">
+      <DependentUpon>DELET_CHEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_chef1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_chef1.Designer.cs">
+      <DependentUpon>Edit_chef1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EDIT_CUSTOMER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EDIT_CUSTOMER.Designer.cs">
+      <DependentUpon>EDIT_CUSTOMER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit_username 2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_username 2.Designer.cs">
+      <DependentUpon>edit_username 2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit1.Designer.cs">
+      <DependentUpon>Edit1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMAIL_EDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMAIL_EDIT.Designer.cs">
+      <DependentUpon>EMAIL_EDIT.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -102,46 +174,109 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_password.Designer.cs">
+      <DependentUpon>Manager_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_email.Designer.cs">
+      <DependentUpon>Manager_email.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager_Options.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Manager_Options.Designer.cs">
       <DependentUpon>Manager_Options.cs</DependentUpon>
     </Compile>
+    <Compile Include="Password_chef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password_chef.Designer.cs">
+      <DependentUpon>Password_chef.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="ADDING_CUSTOMERcs.resx">
+      <DependentUpon>ADDING_CUSTOMERcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Adding_manager.resx">
       <DependentUpon>Adding_manager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMainPage.resx">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Chef-op2.resx">
+      <DependentUpon>Chef-op2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Chefs_Options.resx">
       <DependentUpon>Chefs_Options.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerMainPage.resx">
-      <DependentUpon>CustomerMainPage.cs</DependentUpon>
+    <EmbeddedResource Include="chef_userNum.resx">
+      <DependentUpon>chef_userNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CUSTOMER_EMAIL.resx">
+      <DependentUpon>CUSTOMER_EMAIL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer_Options.resx">
       <DependentUpon>Customer_Options.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CUSTOMER_PASSWORD.resx">
+      <DependentUpon>CUSTOMER_PASSWORD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CUSTOMER_USERNUM.resx">
+      <DependentUpon>CUSTOMER_USERNUM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delet1.resx">
+      <DependentUpon>Delet1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DELET_CHEF.resx">
+      <DependentUpon>DELET_CHEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_chef1.resx">
+      <DependentUpon>Edit_chef1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EDIT_CUSTOMER.resx">
+      <DependentUpon>EDIT_CUSTOMER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_username 2.resx">
+      <DependentUpon>edit_username 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit1.resx">
+      <DependentUpon>Edit1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMAIL_EDIT.resx">
+      <DependentUpon>EMAIL_EDIT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_password.resx">
+      <DependentUpon>Manager_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_email.resx">
+      <DependentUpon>Manager_email.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager_Options.resx">
       <DependentUpon>Manager_Options.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Password_chef.resx">
+      <DependentUpon>Password_chef.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </None>
@@ -186,8 +321,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\Premium Vector _ Handdrawn chef logo mascot delicious.jpeg" />
-    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\WhatsApp Image 2024-04-26 at 15.22.36_91401295.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

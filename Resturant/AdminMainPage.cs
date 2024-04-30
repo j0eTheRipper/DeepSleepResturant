@@ -21,12 +21,14 @@ namespace Resturant
         {
             Manager_Options Choices1 = new Manager_Options();
             Choices1.Show();
+            this.Hide();
         }
 
         private void TextBox2_Click(object sender, EventArgs e)
         {
             Customer_Options Customer1 = new Customer_Options();
             Customer1.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,6 +40,12 @@ namespace Resturant
         {
             Chefs_Options added  = new Chefs_Options();
             added.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }
