@@ -57,6 +57,11 @@ namespace Resturant
                     CustomerMainPage customer_user = new CustomerMainPage();
                     customer_user.Show();
                 }
+                else if (user.role == "manager")
+                {
+                    ManagerMainPage managerMain = new ManagerMainPage();
+                    managerMain.Show();
+                }
             }
             
         }
