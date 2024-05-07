@@ -24,7 +24,7 @@ namespace Resturant
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Adding_manager add_manager = new Adding_manager();
+            AddUser add_manager = new AddUser();
             add_manager.Show();
         }
 

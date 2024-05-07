@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace Resturant
 {
-    public partial class Adding_manager : Form
+    public partial class AddUser : Form
     {
-        public Adding_manager()
+        public AddUser()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
