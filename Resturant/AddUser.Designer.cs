@@ -37,8 +37,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.rdoManager = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rdoCustomer = new System.Windows.Forms.RadioButton();
+            this.rdoChef = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -127,33 +127,33 @@
             this.rdoManager.AutoSize = true;
             this.rdoManager.Location = new System.Drawing.Point(347, 365);
             this.rdoManager.Name = "rdoManager";
-            this.rdoManager.Size = new System.Drawing.Size(103, 20);
+            this.rdoManager.Size = new System.Drawing.Size(82, 20);
             this.rdoManager.TabIndex = 8;
             this.rdoManager.TabStop = true;
-            this.rdoManager.Text = "radioButton1";
+            this.rdoManager.Text = "Manager";
             this.rdoManager.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdoCustomer
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(578, 365);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(103, 20);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoCustomer.AutoSize = true;
+            this.rdoCustomer.Location = new System.Drawing.Point(578, 365);
+            this.rdoCustomer.Name = "rdoCustomer";
+            this.rdoCustomer.Size = new System.Drawing.Size(85, 20);
+            this.rdoCustomer.TabIndex = 9;
+            this.rdoCustomer.TabStop = true;
+            this.rdoCustomer.Text = "Customer";
+            this.rdoCustomer.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rdoChef
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(469, 365);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(103, 20);
-            this.radioButton3.TabIndex = 10;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdoChef.AutoSize = true;
+            this.rdoChef.Location = new System.Drawing.Point(469, 365);
+            this.rdoChef.Name = "rdoChef";
+            this.rdoChef.Size = new System.Drawing.Size(55, 20);
+            this.rdoChef.TabIndex = 10;
+            this.rdoChef.TabStop = true;
+            this.rdoChef.Text = "Chef";
+            this.rdoChef.UseVisualStyleBackColor = true;
             // 
             // AddUser
             // 
@@ -161,8 +161,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Sienna;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.rdoChef);
+            this.Controls.Add(this.rdoCustomer);
             this.Controls.Add(this.rdoManager);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -191,7 +191,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RadioButton rdoManager;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rdoCustomer;
+        private System.Windows.Forms.RadioButton rdoChef;
     }
 }
