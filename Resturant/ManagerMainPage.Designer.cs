@@ -87,6 +87,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ManagerMainPage";
             this.Text = "ManagerMainPage";
+            this.Load += new System.EventHandler(this.ManagerMainPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
