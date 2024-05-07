@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Resturant
+namespace Resturant.Admin
 {
-    public partial class ManagerMainPage : Form
+    public partial class Delete : Form
     {
-        public ManagerMainPage()
+        public Delete()
         {
             InitializeComponent();
-        }
-
-        private void ManagerMainPage_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -8,13 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Resturant
+namespace Resturant.Admin
 {
-    public partial class Chefs_Options : Form
+    public partial class Options : Form
     {
-        public Chefs_Options()
+        public Options()
         {
             InitializeComponent();
+        }
+
+        private void TextBox3_Click(object sender, EventArgs e)
+        {
+            AddUser  addUser = new AddUser();
+            addUser.Show();
+            this.Hide();
+            
         }
     }
 }
