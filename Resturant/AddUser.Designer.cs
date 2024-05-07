@@ -1,6 +1,6 @@
 ﻿namespace Resturant
 {
-    partial class Adding_manager
+    partial class AddUser
     {
         /// <summary>
         /// Required designer variable.
@@ -31,18 +31,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.username_mang1 = new System.Windows.Forms.TextBox();
-            this.Password_manag1 = new System.Windows.Forms.TextBox();
-            this.Email_manang1 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.rdoManager = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(433, 107);
+            this.label1.Location = new System.Drawing.Point(427, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 49);
@@ -53,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(433, 212);
+            this.label2.Location = new System.Drawing.Point(427, 144);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 49);
@@ -64,36 +67,36 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Uighur", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(461, 311);
+            this.label3.Location = new System.Drawing.Point(455, 243);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 49);
             this.label3.TabIndex = 2;
             this.label3.Text = "EMAIL";
             // 
-            // username_mang1
+            // txtUsername
             // 
-            this.username_mang1.Location = new System.Drawing.Point(403, 169);
-            this.username_mang1.Margin = new System.Windows.Forms.Padding(4);
-            this.username_mang1.Name = "username_mang1";
-            this.username_mang1.Size = new System.Drawing.Size(225, 22);
-            this.username_mang1.TabIndex = 3;
+            this.txtUsername.Location = new System.Drawing.Point(397, 101);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(225, 22);
+            this.txtUsername.TabIndex = 3;
             // 
-            // Password_manag1
+            // txtPassword
             // 
-            this.Password_manag1.Location = new System.Drawing.Point(403, 262);
-            this.Password_manag1.Margin = new System.Windows.Forms.Padding(4);
-            this.Password_manag1.Name = "Password_manag1";
-            this.Password_manag1.Size = new System.Drawing.Size(225, 22);
-            this.Password_manag1.TabIndex = 4;
+            this.txtPassword.Location = new System.Drawing.Point(397, 194);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(225, 22);
+            this.txtPassword.TabIndex = 4;
             // 
-            // Email_manang1
+            // txtEmail
             // 
-            this.Email_manang1.Location = new System.Drawing.Point(403, 362);
-            this.Email_manang1.Margin = new System.Windows.Forms.Padding(4);
-            this.Email_manang1.Name = "Email_manang1";
-            this.Email_manang1.Size = new System.Drawing.Size(225, 22);
-            this.Email_manang1.TabIndex = 5;
+            this.txtEmail.Location = new System.Drawing.Point(397, 294);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(225, 22);
+            this.txtEmail.TabIndex = 5;
             // 
             // button1
             // 
@@ -105,7 +108,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(288, 48);
             this.button1.TabIndex = 6;
-            this.button1.Text = "ADD NEW MANAGER";
+            this.button1.Text = "Add User";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -119,22 +122,58 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Adding_manager
+            // rdoManager
+            // 
+            this.rdoManager.AutoSize = true;
+            this.rdoManager.Location = new System.Drawing.Point(347, 365);
+            this.rdoManager.Name = "rdoManager";
+            this.rdoManager.Size = new System.Drawing.Size(103, 20);
+            this.rdoManager.TabIndex = 8;
+            this.rdoManager.TabStop = true;
+            this.rdoManager.Text = "radioButton1";
+            this.rdoManager.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(578, 365);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(103, 20);
+            this.radioButton2.TabIndex = 9;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(469, 365);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(103, 20);
+            this.radioButton3.TabIndex = 10;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton3";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Sienna;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.rdoManager);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Email_manang1);
-            this.Controls.Add(this.Password_manag1);
-            this.Controls.Add(this.username_mang1);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Adding_manager";
+            this.Name = "AddUser";
             this.Text = "Adding_manager";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -146,10 +185,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox username_mang1;
-        private System.Windows.Forms.TextBox Password_manag1;
-        private System.Windows.Forms.TextBox Email_manang1;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton rdoManager;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }
