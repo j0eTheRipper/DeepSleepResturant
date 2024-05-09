@@ -79,6 +79,36 @@
     <Compile Include="Admin\Options.Designer.cs">
       <DependentUpon>Options.cs</DependentUpon>
     </Compile>
+    <Compile Include="chef\ChefMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chef\ChefMainPage.Designer.cs">
+      <DependentUpon>ChefMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chef\Ingredients Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chef\Ingredients Inventory.Designer.cs">
+      <DependentUpon>Ingredients Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chef\Manage Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chef\Manage Orders.Designer.cs">
+      <DependentUpon>Manage Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chef\Update chef profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chef\Update chef profile.Designer.cs">
+      <DependentUpon>Update chef profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chef\View Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chef\View Orders.Designer.cs">
+      <DependentUpon>View Orders.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +140,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Options.resx">
       <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chef\ChefMainPage.resx">
+      <DependentUpon>ChefMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chef\Ingredients Inventory.resx">
+      <DependentUpon>Ingredients Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chef\Manage Orders.resx">
+      <DependentUpon>Manage Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chef\Update chef profile.resx">
+      <DependentUpon>Update chef profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chef\View Orders.resx">
+      <DependentUpon>View Orders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerMainPage.resx">
       <DependentUpon>CustomerMainPage.cs</DependentUpon>
