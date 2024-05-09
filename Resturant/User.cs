@@ -13,7 +13,7 @@ namespace Resturant
     internal class User
     {
         public string username, password, email, role;
-        private static string connectionString = Properties.Settings.Default.Database1ConnectionString;
+        private static string connectionString = Settings.Default.Database1ConnectionString;
         private User(string username, string password, string email, string role)
         {
             this.username = username;
