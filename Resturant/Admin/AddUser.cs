@@ -21,7 +21,12 @@ namespace Resturant
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (rdoChef.Checked)
+                User.RegisterUser(txtUsername.Text, txtPassword.Text, txtEmail.Text, "chef");
+            else if (rdoManager.Checked)
+                User.RegisterUser(txtUsername.Text, txtPassword.Text, txtEmail.Text, "manager");
+            else if (rdoCustomer.Checked)
+                User.RegisterUser(txtUsername.Text, txtPassword.Text, txtEmail.Text, "customer");
 
         }
 
