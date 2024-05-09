@@ -21,6 +21,8 @@ namespace Resturant
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -28,6 +30,11 @@ namespace Resturant
            Options options = new Options();
             options.Show();
             this.Hide();
+        }
+
+        private void rdoManager_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
