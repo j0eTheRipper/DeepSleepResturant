@@ -62,6 +62,7 @@ namespace Resturant
                     ManagerMainPage managerMain = new ManagerMainPage();
                     managerMain.Show();
                 }
+                this.Hide();
             }
             
         }
