@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Resturant.Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,7 +49,7 @@ namespace Resturant
             {
                 if (user.role == "admin")
                 {
-                    AdminMainPage admin_user = new AdminMainPage();
+                    Options admin_user = new Options();
                     admin_user.Show();
                 }
                 else if (user.role == "customer")

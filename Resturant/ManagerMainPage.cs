@@ -16,5 +16,10 @@ namespace Resturant
         {
             InitializeComponent();
         }
+
+        private void ManagerMainPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
