@@ -39,10 +39,10 @@
             this.TextBox3.BackColor = System.Drawing.Color.Tan;
             this.TextBox3.Font = new System.Drawing.Font("Microsoft Uighur", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TextBox3.Location = new System.Drawing.Point(11, 199);
-            this.TextBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.TextBox3.Location = new System.Drawing.Point(15, 245);
+            this.TextBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(212, 53);
+            this.TextBox3.Size = new System.Drawing.Size(283, 65);
             this.TextBox3.TabIndex = 13;
             this.TextBox3.Text = "Add Users";
             this.TextBox3.UseVisualStyleBackColor = false;
@@ -53,10 +53,10 @@
             this.TextBox2.BackColor = System.Drawing.Color.Tan;
             this.TextBox2.Font = new System.Drawing.Font("Microsoft Uighur", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TextBox2.Location = new System.Drawing.Point(279, 196);
-            this.TextBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.TextBox2.Location = new System.Drawing.Point(372, 241);
+            this.TextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBox2.Name = "TextBox2";
-            this.TextBox2.Size = new System.Drawing.Size(212, 58);
+            this.TextBox2.Size = new System.Drawing.Size(283, 71);
             this.TextBox2.TabIndex = 14;
             this.TextBox2.Text = "Delete Users";
             this.TextBox2.UseVisualStyleBackColor = false;
@@ -66,10 +66,10 @@
             this.button1.BackColor = System.Drawing.Color.Tan;
             this.button1.Font = new System.Drawing.Font("Microsoft Uighur", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(550, 196);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(733, 241);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 58);
+            this.button1.Size = new System.Drawing.Size(283, 71);
             this.button1.TabIndex = 15;
             this.button1.Text = "Update Own Profile";
             this.button1.UseVisualStyleBackColor = false;
@@ -78,23 +78,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(300, 54);
+            this.label1.Location = new System.Drawing.Point(400, 66);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 42);
+            this.label1.Size = new System.Drawing.Size(212, 53);
             this.label1.TabIndex = 16;
             this.label1.Text = "AdminMainPage";
             // 
             // Options
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Sienna;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1083, 554);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TextBox2);
             this.Controls.Add(this.TextBox3);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Options";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Options";
             this.ResumeLayout(false);
             this.PerformLayout();

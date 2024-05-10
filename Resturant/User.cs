@@ -13,7 +13,7 @@ namespace Resturant
     internal class User
     {
         public string username, password, email, role;
-        private static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\alial\\Source\\Repos\\Ali1767\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True";
+        private static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\ahezm\\Downloads\\DeepSleepResturant\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True";
         private User(string username, string password, string email, string role)
         {
             this.username = username;
