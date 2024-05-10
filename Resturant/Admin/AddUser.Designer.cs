@@ -58,6 +58,7 @@
             this.label1.Size = new System.Drawing.Size(121, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "USERNAME";
+            this.label1.UseWaitCursor = true;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -70,6 +71,7 @@
             this.label2.Size = new System.Drawing.Size(123, 37);
             this.label2.TabIndex = 1;
             this.label2.Text = "PASSWORD";
+            this.label2.UseWaitCursor = true;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -82,6 +84,7 @@
             this.label3.Size = new System.Drawing.Size(76, 37);
             this.label3.TabIndex = 2;
             this.label3.Text = "EMAIL";
+            this.label3.UseWaitCursor = true;
             // 
             // txtUsername
             // 
@@ -90,6 +93,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(230, 22);
             this.txtUsername.TabIndex = 3;
+            this.txtUsername.UseWaitCursor = true;
             // 
             // txtPassword
             // 
@@ -99,6 +103,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(230, 22);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.UseWaitCursor = true;
             // 
             // txtEmail
             // 
@@ -107,6 +112,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(230, 22);
             this.txtEmail.TabIndex = 5;
+            this.txtEmail.UseWaitCursor = true;
             // 
             // btnAdd_user
             // 
@@ -118,8 +124,9 @@
             this.btnAdd_user.Name = "btnAdd_user";
             this.btnAdd_user.Size = new System.Drawing.Size(288, 48);
             this.btnAdd_user.TabIndex = 6;
-            this.btnAdd_user.Text = "Add user";
+            this.btnAdd_user.Text = "Add User";
             this.btnAdd_user.UseVisualStyleBackColor = false;
+            this.btnAdd_user.UseWaitCursor = true;
             this.btnAdd_user.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -131,6 +138,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "HOME";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseWaitCursor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // rdoManager
@@ -145,6 +153,7 @@
             this.rdoManager.TabStop = true;
             this.rdoManager.Text = "Manager";
             this.rdoManager.UseVisualStyleBackColor = true;
+            this.rdoManager.UseWaitCursor = true;
             this.rdoManager.CheckedChanged += new System.EventHandler(this.rdoManager_CheckedChanged);
             // 
             // rdoCustomer
@@ -159,6 +168,7 @@
             this.rdoCustomer.TabStop = true;
             this.rdoCustomer.Text = "Customer";
             this.rdoCustomer.UseVisualStyleBackColor = true;
+            this.rdoCustomer.UseWaitCursor = true;
             // 
             // rdoChef
             // 
@@ -172,6 +182,7 @@
             this.rdoChef.TabStop = true;
             this.rdoChef.Text = "Chef";
             this.rdoChef.UseVisualStyleBackColor = true;
+            this.rdoChef.UseWaitCursor = true;
             // 
             // panel1
             // 
@@ -185,12 +196,13 @@
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtUsername);
-            this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(598, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(409, 474);
             this.panel1.TabIndex = 11;
+            this.panel1.UseWaitCursor = true;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // groupBox2
@@ -203,12 +215,13 @@
             this.groupBox2.Size = new System.Drawing.Size(338, 70);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
+            this.groupBox2.UseWaitCursor = true;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 124);
+            this.pictureBox1.Location = new System.Drawing.Point(72, 124);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(269, 274);
             this.pictureBox1.TabIndex = 12;

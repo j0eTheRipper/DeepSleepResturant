@@ -20,6 +20,16 @@ namespace Resturant
             InitializeComponent();
         }
 
+        public void EmptyAllFields()
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtEmail.Text = "";
+            rdoChef.Checked = false;
+            rdoCustomer.Checked = false;
+            rdoManager.Checked = false;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string UserType = "";
@@ -28,24 +38,31 @@ namespace Resturant
             {
                 MessageBox.Show($"Please Fill All User Infromation");
             }
+
             if (rdoChef.Checked)
             {
-                User.RegisterUser(txtUsername.Text, txtPassword.Text, txtEmail.Text, "chef");
-                UserType = "Chef";
+                UserType = "chef";
             }
             else if (rdoManager.Checked)
             {
-                User.RegisterUser(txtUsername.Text, txtPassword.Text, txtEmail.Text, "manager");
-                UserType = "Manager";
+                UserType = "manager";
             }  
             else if (rdoCustomer.Checked)
             {
-                User.RegisterUser(txtUsername.Text, txtPassword.Text, txtEmail.Text, "customer");
-                UserType = "Customer";
+                UserType = "customer";
             }
-                
-
-            MessageBox.Show($"New User With {UserType} Role Has Been Added !");
+            bool is_created = User.RegisterUser(txtUsername.Text, txtPassword.Text, txtEmail.Text, UserType);
+            if (is_created)
+            {
+                MessageBox.Show($"New User With {UserType} Role Has Been Added !");
+                this.EmptyAllFields();
+            }
+            else
+            {
+                MessageBox.Show("User Information is not Correct or User Exsist");
+            }
+            
+            
 
 
 

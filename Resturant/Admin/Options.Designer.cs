@@ -60,6 +60,7 @@
             this.TextBox2.TabIndex = 14;
             this.TextBox2.Text = "Delete Users";
             this.TextBox2.UseVisualStyleBackColor = false;
+            this.TextBox2.Click += new System.EventHandler(this.TextBox2_Click);
             // 
             // button1
             // 
@@ -95,7 +96,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TextBox2);
             this.Controls.Add(this.TextBox3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Options";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Options";

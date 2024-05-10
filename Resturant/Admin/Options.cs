@@ -24,5 +24,12 @@ namespace Resturant.Admin
             this.Hide();
             
         }
+
+        private void TextBox2_Click(object sender, EventArgs e)
+        {
+            DeleteUser deleteUser = new DeleteUser();
+            deleteUser.Show();
+            this.Hide();
+        }
     }
 }
