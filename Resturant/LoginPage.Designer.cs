@@ -50,7 +50,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(452, 156);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 31);
+            this.label1.Size = new System.Drawing.Size(101, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "Login";
             // 
@@ -59,7 +59,7 @@
             this.txtUsername.ForeColor = System.Drawing.Color.Gray;
             this.txtUsername.Location = new System.Drawing.Point(371, 211);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(253, 38);
+            this.txtUsername.Size = new System.Drawing.Size(253, 45);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Text = "Username";
             this.txtUsername.TextChanged += new System.EventHandler(this.onRightCredentials);
@@ -71,7 +71,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.Gray;
             this.txtPassword.Location = new System.Drawing.Point(371, 255);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(253, 38);
+            this.txtPassword.Size = new System.Drawing.Size(253, 45);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "Password";
             this.txtPassword.TextChanged += new System.EventHandler(this.onRightCredentials);
@@ -80,7 +80,7 @@
             // 
             // LoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(984, 533);
@@ -92,6 +92,7 @@
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "LoginPage";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
