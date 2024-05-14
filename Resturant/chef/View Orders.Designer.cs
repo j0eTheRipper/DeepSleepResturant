@@ -141,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Sienna;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(796, 448);
             this.Controls.Add(this.lblViewOrderPage);
             this.Controls.Add(this.btnBackOrd);
             this.Controls.Add(this.label3);
@@ -153,6 +153,7 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnView);
             this.Name = "View_Orders";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View_Orders";
             this.ResumeLayout(false);
             this.PerformLayout();

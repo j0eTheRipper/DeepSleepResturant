@@ -33,16 +33,16 @@ namespace Resturant.chef
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            Ingredients_Inventory inventory = new Ingredients_Inventory();
+            Ingredient_Inventory inventory = new Ingredient_Inventory();
             inventory.Show();
             this.Hide();
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e)
         {
-            Update_chef_profile ChefProfile = new Update_chef_profile();
-            ChefProfile.Show();
-            this.Hide();
+            
+            
+            
         }
     }
 }
