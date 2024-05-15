@@ -101,6 +101,7 @@
             this.Controls.Add(this.btnViewOrders);
             this.Controls.Add(this.label1);
             this.Name = "ChefMainPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChefMainPage";
             this.ResumeLayout(false);
             this.PerformLayout();
