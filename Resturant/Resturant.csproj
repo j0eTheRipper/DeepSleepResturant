@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -117,14 +119,22 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerMainPage.cs">
+    <Compile Include="manage\ManagerMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerMainPage.Designer.cs">
+    <Compile Include="manage\ManagerMainPage.Designer.cs">
       <DependentUpon>ManagerMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage\NewReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage\NewReservation.Designer.cs">
+      <DependentUpon>NewReservation.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservation.cs" />
+    <Compile Include="Table.cs" />
     <Compile Include="User.cs" />
     <EmbeddedResource Include="Admin\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
@@ -153,8 +163,11 @@
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerMainPage.resx">
+    <EmbeddedResource Include="manage\ManagerMainPage.resx">
       <DependentUpon>ManagerMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage\NewReservation.resx">
+      <DependentUpon>NewReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -202,5 +215,6 @@
     <None Include="Resources\Premium Vector _ Handdrawn chef logo mascot delicious.jpeg" />
     <None Include="Resources\Capture.PNG" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

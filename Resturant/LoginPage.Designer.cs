@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.chbxShowPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -78,12 +79,25 @@
             this.txtPassword.Enter += new System.EventHandler(this.txtBox_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtBox_Leave);
             // 
+            // chbxShowPassword
+            // 
+            this.chbxShowPassword.AutoSize = true;
+            this.chbxShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbxShowPassword.Location = new System.Drawing.Point(630, 258);
+            this.chbxShowPassword.Name = "chbxShowPassword";
+            this.chbxShowPassword.Size = new System.Drawing.Size(184, 29);
+            this.chbxShowPassword.TabIndex = 4;
+            this.chbxShowPassword.Text = "Show Password";
+            this.chbxShowPassword.UseVisualStyleBackColor = true;
+            this.chbxShowPassword.CheckedChanged += new System.EventHandler(this.chbxShowPassword_CheckedChanged);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(984, 533);
+            this.Controls.Add(this.chbxShowPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
@@ -104,6 +118,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.CheckBox chbxShowPassword;
     }
 }
 
