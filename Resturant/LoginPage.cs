@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Resturant.Admin;
+using Resturant.chef;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,7 +50,7 @@ namespace Resturant
             {
                 if (user.role == "admin")
                 {
-                    AdminMainPage admin_user = new AdminMainPage();
+                    Options admin_user = new Options();
                     admin_user.Show();
                 }
                 else if (user.role == "customer")
@@ -61,6 +63,12 @@ namespace Resturant
                     ManagerMainPage managerMain = new ManagerMainPage();
                     managerMain.Show();
                 }
+                else if (user.role == "chef");
+                {
+                    ChefMainPage chefMain = new ChefMainPage();
+                    chefMain.Show();
+                }
+                this.Hide();
             }
             
         }
@@ -101,6 +109,11 @@ namespace Resturant
             {
                 animateLoginbtn(new Point(371, 299));
             }
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

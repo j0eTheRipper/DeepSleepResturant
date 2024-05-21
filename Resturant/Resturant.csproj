@@ -50,6 +50,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,40 +63,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddUser.cs">
+    <Compile Include="Admin\AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddUser.Designer.cs">
+    <Compile Include="Admin\AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminMainPage.cs">
+    <Compile Include="Admin\DeleteUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminMainPage.Designer.cs">
-      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    <Compile Include="Admin\DeleteUser.Designer.cs">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chefs_Options.cs">
+    <Compile Include="Admin\Options.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chefs_Options.Designer.cs">
-      <DependentUpon>Chefs_Options.cs</DependentUpon>
+    <Compile Include="Admin\Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerMainPage.cs">
+    <Compile Include="chef\ChefMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerMainPage.Designer.cs">
+    <Compile Include="chef\ChefMainPage.Designer.cs">
+      <DependentUpon>ChefMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chef\Ingredients Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chef\Ingredients Inventory.Designer.cs">
+      <DependentUpon>Ingredients Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chef\Manage Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chef\Manage Orders.Designer.cs">
+      <DependentUpon>Manage Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chef\Update chef profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chef\Update chef profile.Designer.cs">
+      <DependentUpon>Update chef profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chef\View Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chef\View Orders.Designer.cs">
+      <DependentUpon>View Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\cFeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\cFeedBack.Designer.cs">
+      <DependentUpon>cFeedBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\cMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\cMenu.Designer.cs">
+      <DependentUpon>cMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\cOrderFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\cOrderFood.Designer.cs">
+      <DependentUpon>cOrderFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\cReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\cReservation.Designer.cs">
+      <DependentUpon>cReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerMainPage.Designer.cs">
       <DependentUpon>CustomerMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Options.cs">
+    <Compile Include="Customer\cViewOrder_Reservation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer_Options.Designer.cs">
-      <DependentUpon>Customer_Options.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Database1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    <Compile Include="Customer\cViewOrder_Reservation.Designer.cs">
+      <DependentUpon>cViewOrder_Reservation.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -108,38 +159,44 @@
     <Compile Include="ManagerMainPage.Designer.cs">
       <DependentUpon>ManagerMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manager_Options.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manager_Options.Designer.cs">
-      <DependentUpon>Manager_Options.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
-    <EmbeddedResource Include="AddUser.resx">
+    <EmbeddedResource Include="Admin\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminMainPage.resx">
-      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\DeleteUser.resx">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Chefs_Options.resx">
-      <DependentUpon>Chefs_Options.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerMainPage.resx">
+    <EmbeddedResource Include="chef\ChefMainPage.resx">
+      <DependentUpon>ChefMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chef\Ingredients Inventory.resx">
+      <DependentUpon>Ingredients Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chef\Manage Orders.resx">
+      <DependentUpon>Manage Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chef\Update chef profile.resx">
+      <DependentUpon>Update chef profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chef\View Orders.resx">
+      <DependentUpon>View Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\cMenu.resx">
+      <DependentUpon>cMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerMainPage.resx">
       <DependentUpon>CustomerMainPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Customer_Options.resx">
-      <DependentUpon>Customer_Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerMainPage.resx">
       <DependentUpon>ManagerMainPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manager_Options.resx">
-      <DependentUpon>Manager_Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,17 +208,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Database1DataSet.xsc">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database1DataSet.xss">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
