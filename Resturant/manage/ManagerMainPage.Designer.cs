@@ -75,6 +75,7 @@
             this.lnkReservationReport.TabIndex = 1;
             this.lnkReservationReport.TabStop = true;
             this.lnkReservationReport.Text = "View Reservation Report";
+            this.lnkReservationReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkReservationReport_LinkClicked);
             // 
             // lnkReserveForCustomer
             // 
@@ -104,6 +105,7 @@
             this.Load += new System.EventHandler(this.ManagerMainPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

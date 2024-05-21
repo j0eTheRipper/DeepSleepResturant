@@ -39,16 +39,18 @@
             this.btnMakeReservation = new System.Windows.Forms.Button();
             this.txtNumberOfPeople = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.grpReservationDetails = new System.Windows.Forms.GroupBox();
+            this.grpReservationDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstCustomers
             // 
             this.lstCustomers.FormattingEnabled = true;
             this.lstCustomers.ItemHeight = 24;
-            this.lstCustomers.Location = new System.Drawing.Point(15, 39);
+            this.lstCustomers.Location = new System.Drawing.Point(19, 39);
             this.lstCustomers.Margin = new System.Windows.Forms.Padding(6);
             this.lstCustomers.Name = "lstCustomers";
-            this.lstCustomers.Size = new System.Drawing.Size(263, 172);
+            this.lstCustomers.Size = new System.Drawing.Size(341, 172);
             this.lstCustomers.TabIndex = 0;
             // 
             // label1
@@ -63,16 +65,17 @@
             // 
             // dntDate
             // 
-            this.dntDate.Location = new System.Drawing.Point(35, 305);
+            this.dntDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dntDate.Location = new System.Drawing.Point(10, 93);
             this.dntDate.MinDate = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             this.dntDate.Name = "dntDate";
-            this.dntDate.Size = new System.Drawing.Size(228, 29);
+            this.dntDate.Size = new System.Drawing.Size(335, 29);
             this.dntDate.TabIndex = 2;
             // 
             // txtHour
             // 
             this.txtHour.ForeColor = System.Drawing.Color.Gray;
-            this.txtHour.Location = new System.Drawing.Point(15, 344);
+            this.txtHour.Location = new System.Drawing.Point(38, 128);
             this.txtHour.Name = "txtHour";
             this.txtHour.Size = new System.Drawing.Size(84, 29);
             this.txtHour.TabIndex = 3;
@@ -84,7 +87,7 @@
             // txtMinute
             // 
             this.txtMinute.ForeColor = System.Drawing.Color.Gray;
-            this.txtMinute.Location = new System.Drawing.Point(126, 344);
+            this.txtMinute.Location = new System.Drawing.Point(149, 128);
             this.txtMinute.Name = "txtMinute";
             this.txtMinute.Size = new System.Drawing.Size(80, 29);
             this.txtMinute.TabIndex = 4;
@@ -96,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 269);
+            this.label2.Location = new System.Drawing.Point(6, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(240, 24);
             this.label2.TabIndex = 5;
@@ -105,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(105, 347);
+            this.label3.Location = new System.Drawing.Point(128, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 24);
             this.label3.TabIndex = 6;
@@ -114,7 +117,7 @@
             // btnAMPM
             // 
             this.btnAMPM.BackColor = System.Drawing.Color.Gold;
-            this.btnAMPM.Location = new System.Drawing.Point(212, 342);
+            this.btnAMPM.Location = new System.Drawing.Point(235, 126);
             this.btnAMPM.Name = "btnAMPM";
             this.btnAMPM.Size = new System.Drawing.Size(76, 31);
             this.btnAMPM.TabIndex = 7;
@@ -126,7 +129,7 @@
             // 
             this.btnMakeReservation.BackColor = System.Drawing.Color.DarkGray;
             this.btnMakeReservation.ForeColor = System.Drawing.Color.Black;
-            this.btnMakeReservation.Location = new System.Drawing.Point(15, 392);
+            this.btnMakeReservation.Location = new System.Drawing.Point(53, 392);
             this.btnMakeReservation.Name = "btnMakeReservation";
             this.btnMakeReservation.Size = new System.Drawing.Size(273, 40);
             this.btnMakeReservation.TabIndex = 8;
@@ -137,7 +140,7 @@
             // txtNumberOfPeople
             // 
             this.txtNumberOfPeople.ForeColor = System.Drawing.Color.Black;
-            this.txtNumberOfPeople.Location = new System.Drawing.Point(185, 237);
+            this.txtNumberOfPeople.Location = new System.Drawing.Point(242, 25);
             this.txtNumberOfPeople.Name = "txtNumberOfPeople";
             this.txtNumberOfPeople.Size = new System.Drawing.Size(103, 29);
             this.txtNumberOfPeople.TabIndex = 9;
@@ -145,26 +148,36 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 237);
+            this.label4.Location = new System.Drawing.Point(6, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 24);
             this.label4.TabIndex = 10;
             this.label4.Text = "Number of people:";
             // 
+            // grpReservationDetails
+            // 
+            this.grpReservationDetails.Controls.Add(this.label4);
+            this.grpReservationDetails.Controls.Add(this.dntDate);
+            this.grpReservationDetails.Controls.Add(this.txtNumberOfPeople);
+            this.grpReservationDetails.Controls.Add(this.txtHour);
+            this.grpReservationDetails.Controls.Add(this.txtMinute);
+            this.grpReservationDetails.Controls.Add(this.btnAMPM);
+            this.grpReservationDetails.Controls.Add(this.label2);
+            this.grpReservationDetails.Controls.Add(this.label3);
+            this.grpReservationDetails.Location = new System.Drawing.Point(15, 220);
+            this.grpReservationDetails.Name = "grpReservationDetails";
+            this.grpReservationDetails.Size = new System.Drawing.Size(351, 166);
+            this.grpReservationDetails.TabIndex = 11;
+            this.grpReservationDetails.TabStop = false;
+            this.grpReservationDetails.Text = "Reservation Details";
+            // 
             // NewReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 444);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtNumberOfPeople);
+            this.ClientSize = new System.Drawing.Size(378, 444);
+            this.Controls.Add(this.grpReservationDetails);
             this.Controls.Add(this.btnMakeReservation);
-            this.Controls.Add(this.btnAMPM);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtMinute);
-            this.Controls.Add(this.txtHour);
-            this.Controls.Add(this.dntDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstCustomers);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,6 +186,8 @@
             this.Name = "NewReservation";
             this.Text = "NewReservation";
             this.Load += new System.EventHandler(this.NewReservation_Load);
+            this.grpReservationDetails.ResumeLayout(false);
+            this.grpReservationDetails.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +206,6 @@
         private System.Windows.Forms.Button btnMakeReservation;
         private System.Windows.Forms.TextBox txtNumberOfPeople;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox grpReservationDetails;
     }
 }

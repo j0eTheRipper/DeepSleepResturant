@@ -113,11 +113,20 @@
     <Compile Include="CustomerMainPage.Designer.cs">
       <DependentUpon>CustomerMainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="DateAndTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage\frmViewReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage\frmViewReservations.Designer.cs">
+      <DependentUpon>frmViewReservations.cs</DependentUpon>
     </Compile>
     <Compile Include="manage\ManagerMainPage.cs">
       <SubType>Form</SubType>
@@ -162,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage\frmViewReservations.resx">
+      <DependentUpon>frmViewReservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manage\ManagerMainPage.resx">
       <DependentUpon>ManagerMainPage.cs</DependentUpon>

@@ -97,6 +97,14 @@ namespace Resturant
                 MessageBox.Show("please select a customer and specify a date and time");
             else
             {
+                if (btnAMPM.Text == "PM" && txtHour.Text != "12")
+                {
+                    int hour = int.Parse(txtHour.Text) + 12;
+                    time = $"{hour}:{txtMinute.Text}";
+                }
+                if (btnAMPM.Text == "AM" && txtHour.Text == "12")
+                    time = $"0:{txtMinute.Text}";
+
                 Reservation reservation = new Reservation(customerIDs[lstCustomers.SelectedIndex], numberOfPeople, date, time);
                 Table table = reservation.SearchForTable();
                 if (table != null)

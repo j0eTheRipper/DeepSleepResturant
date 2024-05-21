@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Resturant.manage;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,12 @@ namespace Resturant
         {
             NewReservation newReservation = new NewReservation();
             newReservation.ShowDialog();
+        }
+
+        private void lnkReservationReport_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmViewReservations frm = new frmViewReservations();
+            frm.ShowDialog();
         }
     }
 }
