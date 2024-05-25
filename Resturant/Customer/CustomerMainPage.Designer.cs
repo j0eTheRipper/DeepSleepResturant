@@ -35,19 +35,20 @@
             this.Update_profile = new System.Windows.Forms.Button();
             this.Reservation = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Menu = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Menu = new System.Windows.Forms.Button();
+            this.btnOrderReservation = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.View_order.FlatAppearance.BorderSize = 0;
             this.View_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.View_order.ForeColor = System.Drawing.Color.White;
-            this.View_order.Location = new System.Drawing.Point(34, 498);
+            this.View_order.Location = new System.Drawing.Point(34, 572);
             this.View_order.Margin = new System.Windows.Forms.Padding(4);
             this.View_order.Name = "View_order";
             this.View_order.Size = new System.Drawing.Size(197, 66);
@@ -102,7 +103,7 @@
             this.Update_profile.FlatAppearance.BorderSize = 0;
             this.Update_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Update_profile.ForeColor = System.Drawing.Color.White;
-            this.Update_profile.Location = new System.Drawing.Point(34, 593);
+            this.Update_profile.Location = new System.Drawing.Point(34, 663);
             this.Update_profile.Margin = new System.Windows.Forms.Padding(4);
             this.Update_profile.Name = "Update_profile";
             this.Update_profile.Size = new System.Drawing.Size(197, 41);
@@ -128,6 +129,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.btnOrderReservation);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox6);
@@ -147,21 +149,6 @@
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // Menu
-            // 
-            this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Menu.FlatAppearance.BorderSize = 0;
-            this.Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Menu.ForeColor = System.Drawing.Color.White;
-            this.Menu.Location = new System.Drawing.Point(34, 194);
-            this.Menu.Margin = new System.Windows.Forms.Padding(4);
-            this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(197, 44);
-            this.Menu.TabIndex = 0;
-            this.Menu.Text = "Menu";
-            this.Menu.UseVisualStyleBackColor = false;
-            this.Menu.Click += new System.EventHandler(this.Menu_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -175,46 +162,6 @@
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox4.Image = global::Resturant.Properties.Resources.reservation;
-            this.pictureBox4.Location = new System.Drawing.Point(24, 341);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(42, 31);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 15;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox5.Image = global::Resturant.Properties.Resources._6827547_advertising_business_feedback_marketing_rating_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(24, 419);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(42, 31);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 16;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox6.Image = global::Resturant.Properties.Resources._2203547_count_stop_time_watch_icon;
-            this.pictureBox6.Location = new System.Drawing.Point(24, 518);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(42, 31);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 17;
-            this.pictureBox6.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -230,6 +177,46 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox6.Image = global::Resturant.Properties.Resources._2203547_count_stop_time_watch_icon;
+            this.pictureBox6.Location = new System.Drawing.Point(24, 594);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(42, 31);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 17;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox5.Image = global::Resturant.Properties.Resources._6827547_advertising_business_feedback_marketing_rating_icon;
+            this.pictureBox5.Location = new System.Drawing.Point(24, 419);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(42, 31);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 16;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox4.Image = global::Resturant.Properties.Resources.reservation;
+            this.pictureBox4.Location = new System.Drawing.Point(24, 341);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(42, 31);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -241,6 +228,36 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.UseWaitCursor = true;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Menu
+            // 
+            this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Menu.FlatAppearance.BorderSize = 0;
+            this.Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Menu.ForeColor = System.Drawing.Color.White;
+            this.Menu.Location = new System.Drawing.Point(34, 194);
+            this.Menu.Margin = new System.Windows.Forms.Padding(4);
+            this.Menu.Name = "Menu";
+            this.Menu.Size = new System.Drawing.Size(197, 44);
+            this.Menu.TabIndex = 0;
+            this.Menu.Text = "Menu";
+            this.Menu.UseVisualStyleBackColor = false;
+            this.Menu.Click += new System.EventHandler(this.Menu_Click);
+            // 
+            // btnOrderReservation
+            // 
+            this.btnOrderReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnOrderReservation.FlatAppearance.BorderSize = 0;
+            this.btnOrderReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderReservation.ForeColor = System.Drawing.Color.White;
+            this.btnOrderReservation.Location = new System.Drawing.Point(34, 500);
+            this.btnOrderReservation.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOrderReservation.Name = "btnOrderReservation";
+            this.btnOrderReservation.Size = new System.Drawing.Size(197, 41);
+            this.btnOrderReservation.TabIndex = 18;
+            this.btnOrderReservation.Text = "Order Reservation";
+            this.btnOrderReservation.UseVisualStyleBackColor = false;
+            this.btnOrderReservation.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // CustomerMainPage
             // 
@@ -254,10 +271,10 @@
             this.Load += new System.EventHandler(this.CustomerMainPage_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -278,5 +295,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button btnOrderReservation;
     }
 }
