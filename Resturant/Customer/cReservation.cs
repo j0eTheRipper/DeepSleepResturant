@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Resturant
+namespace Resturant.Customer
 {
-    public partial class CustomerMainPage : Form
+    public partial class cReservation : Form
     {
-        public CustomerMainPage()
+        public cReservation()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Menu_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
