@@ -31,5 +31,10 @@ namespace Resturant.Admin
             deleteUser.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
