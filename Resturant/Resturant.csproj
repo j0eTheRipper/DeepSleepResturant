@@ -107,12 +107,6 @@
     <Compile Include="chef\View Orders.Designer.cs">
       <DependentUpon>View Orders.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerMainPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerMainPage.Designer.cs">
-      <DependentUpon>CustomerMainPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="DateAndTime.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -165,9 +159,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="chef\View Orders.resx">
       <DependentUpon>View Orders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerMainPage.resx">
-      <DependentUpon>CustomerMainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>

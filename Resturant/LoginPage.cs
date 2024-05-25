@@ -54,8 +54,9 @@ namespace Resturant
                 }
                 else if (user.role == "customer")
                 {
-                    CustomerMainPage customer_user = new CustomerMainPage();
-                    customer_user.Show();
+                    //CustomerMainPage customer_user = new CustomerMainPage();
+                    //customer_user.Show();
+                    MessageBox.Show("something is in the works");
                 }
                 else if (user.role == "manager")
                 {

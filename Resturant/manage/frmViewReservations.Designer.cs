@@ -61,7 +61,6 @@
             this.dgvReservations.ReadOnly = true;
             this.dgvReservations.Size = new System.Drawing.Size(776, 252);
             this.dgvReservations.TabIndex = 0;
-            this.dgvReservations.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservations_CellClick);
             // 
             // grpReservationDetails
             // 
