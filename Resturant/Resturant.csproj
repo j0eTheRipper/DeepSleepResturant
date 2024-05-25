@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Resturant</RootNamespace>
     <AssemblyName>Resturant</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -27,6 +27,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -107,46 +108,6 @@
     <Compile Include="chef\View Orders.Designer.cs">
       <DependentUpon>View Orders.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\cFeedBack.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer\cFeedBack.Designer.cs">
-      <DependentUpon>cFeedBack.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\cMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer\cMenu.Designer.cs">
-      <DependentUpon>cMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\cOrderFood.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer\cOrderFood.Designer.cs">
-      <DependentUpon>cOrderFood.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\cReservation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer\cReservation.Designer.cs">
-      <DependentUpon>cReservation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\CustomerMainPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer\CustomerMainPage.Designer.cs">
-      <DependentUpon>CustomerMainPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\cViewOrder_Reservation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer\cViewOrder_Reservation.Designer.cs">
-      <DependentUpon>cViewOrder_Reservation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\ResrvationRequest.cs" />
-    <Compile Include="DateAndTime.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +131,12 @@
     </Compile>
     <Compile Include="manage\NewReservation.Designer.cs">
       <DependentUpon>NewReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage\ReservationDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manage\ReservationDetails.Designer.cs">
+      <DependentUpon>ReservationDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -197,15 +164,6 @@
     <EmbeddedResource Include="chef\View Orders.resx">
       <DependentUpon>View Orders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\cFeedBack.resx">
-      <DependentUpon>cFeedBack.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Customer\cMenu.resx">
-      <DependentUpon>cMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Customer\CustomerMainPage.resx">
-      <DependentUpon>CustomerMainPage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manage\NewReservation.resx">
       <DependentUpon>NewReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage\ReservationDetails.resx">
+      <DependentUpon>ReservationDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
