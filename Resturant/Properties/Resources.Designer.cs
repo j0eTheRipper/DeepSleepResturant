@@ -63,6 +63,116 @@ namespace Resturant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2203547_count_stop_time_watch_icon {
+            get {
+                object obj = ResourceManager.GetObject("2203547_count_stop_time_watch_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2530837_brochure_document_menu_note_office_icon {
+            get {
+                object obj = ResourceManager.GetObject("2530837_brochure_document_menu_note_office_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3535178_beverage_cafe_coffee_cold_drink_icon {
+            get {
+                object obj = ResourceManager.GetObject("3535178_beverage_cafe_coffee_cold_drink_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3535183_barista_beverage_bottle_cafe_coffee_icon {
+            get {
+                object obj = ResourceManager.GetObject("3535183_barista_beverage_bottle_cafe_coffee_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3535187_bottle_cafe_coffee_cup_drink_icon {
+            get {
+                object obj = ResourceManager.GetObject("3535187_bottle_cafe_coffee_cup_drink_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3570291_cafe_coffee_drink_espresso_hot_icon {
+            get {
+                object obj = ResourceManager.GetObject("3570291_cafe_coffee_drink_espresso_hot_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5241570_cake_cooking_food_restaurant_sweet_icon {
+            get {
+                object obj = ResourceManager.GetObject("5241570_cake_cooking_food_restaurant_sweet_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6827547_advertising_business_feedback_marketing_rating_icon {
+            get {
+                object obj = ResourceManager.GetObject("6827547_advertising_business_feedback_marketing_rating_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7429333_food_delivery_service_take_away_restaurant_icon {
+            get {
+                object obj = ResourceManager.GetObject("7429333_food_delivery_service_take away_restaurant_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9967657_feedback_review_satisfaction_loyalty_positive_icon {
+            get {
+                object obj = ResourceManager.GetObject("9967657_feedback_review_satisfaction_loyalty_positive_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reservation {
+            get {
+                object obj = ResourceManager.GetObject("reservation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2024_04_26_at_15_22_36_91401295 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2024-04-26 at 15.22.36_91401295", resourceCulture);

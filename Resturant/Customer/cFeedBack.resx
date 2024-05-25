@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="WhatsApp Image 2024-04-26 at 15.22.36_91401295" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WhatsApp Image 2024-04-26 at 15.22.36_91401295.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2530837_brochure_document_menu_note_office_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2530837_brochure_document_menu_note_office_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3535178_beverage_cafe_coffee_cold_drink_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3535178_beverage_cafe_coffee_cold_drink_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3535183_barista_beverage_bottle_cafe_coffee_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3535183_barista_beverage_bottle_cafe_coffee_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3535187_bottle_cafe_coffee_cup_drink_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3535187_bottle_cafe_coffee_cup_drink_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3570291_cafe_coffee_drink_espresso_hot_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3570291_cafe_coffee_drink_espresso_hot_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5241570_cake_cooking_food_restaurant_sweet_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5241570_cake_cooking_food_restaurant_sweet_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="6827547_advertising_business_feedback_marketing_rating_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6827547_advertising_business_feedback_marketing_rating_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="7429333_food_delivery_service_take away_restaurant_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7429333_food_delivery_service_take away_restaurant_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="9967657_feedback_review_satisfaction_loyalty_positive_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9967657_feedback_review_satisfaction_loyalty_positive_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="reservation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reservation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2203547_count_stop_time_watch_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2203547_count_stop_time_watch_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
