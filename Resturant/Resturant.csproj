@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Resturant</RootNamespace>
     <AssemblyName>Resturant</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -27,6 +27,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -107,8 +108,6 @@
     <Compile Include="chef\View Orders.Designer.cs">
       <DependentUpon>View Orders.cs</DependentUpon>
     </Compile>
-    <Compile Include="cReservation.cs" />
-    <Compile Include="CustomerReservation.cs" />
     <Compile Include="Customer\cFeedBack.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +125,6 @@
     </Compile>
     <Compile Include="Customer\cOrderFood.Designer.cs">
       <DependentUpon>cOrderFood.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\cOrderReservation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer\cOrderReservation.Designer.cs">
-      <DependentUpon>cOrderReservation.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer\cReservation.cs">
       <SubType>Form</SubType>
@@ -152,9 +145,6 @@
       <DependentUpon>cViewOrder_Reservation.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer\ResrvationRequest.cs" />
-    <Compile Include="DateAndTime.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +168,12 @@
     </Compile>
     <Compile Include="manage\NewReservation.Designer.cs">
       <DependentUpon>NewReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage\ReservationDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manage\ReservationDetails.Designer.cs">
+      <DependentUpon>ReservationDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -214,9 +210,6 @@
     <EmbeddedResource Include="Customer\CustomerMainPage.resx">
       <DependentUpon>CustomerMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\cViewOrder_Reservation.resx">
-      <DependentUpon>cViewOrder_Reservation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manage\NewReservation.resx">
       <DependentUpon>NewReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage\ReservationDetails.resx">
+      <DependentUpon>ReservationDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
