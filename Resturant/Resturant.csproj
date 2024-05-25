@@ -144,7 +144,6 @@
     <Compile Include="Customer\cViewOrder_Reservation.Designer.cs">
       <DependentUpon>cViewOrder_Reservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\ResrvationRequest.cs" />
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
