@@ -30,6 +30,11 @@
         {
             this.dgvReservations = new System.Windows.Forms.DataGridView();
             this.grpReservationDetails = new System.Windows.Forms.GroupBox();
+            this.txtHourOut = new System.Windows.Forms.TextBox();
+            this.txtMinuteOut = new System.Windows.Forms.TextBox();
+            this.btnAMPMOut = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.chbxIncludeDate = new System.Windows.Forms.CheckBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,11 +45,6 @@
             this.btnAMPMIn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtHourOut = new System.Windows.Forms.TextBox();
-            this.txtMinuteOut = new System.Windows.Forms.TextBox();
-            this.btnAMPMOut = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).BeginInit();
             this.grpReservationDetails.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,7 @@
             this.dgvReservations.ReadOnly = true;
             this.dgvReservations.Size = new System.Drawing.Size(776, 252);
             this.dgvReservations.TabIndex = 0;
+            this.dgvReservations.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservations_CellClick);
             // 
             // grpReservationDetails
             // 
@@ -85,6 +86,59 @@
             this.grpReservationDetails.TabIndex = 12;
             this.grpReservationDetails.TabStop = false;
             this.grpReservationDetails.Text = "Reservation Details";
+            // 
+            // txtHourOut
+            // 
+            this.txtHourOut.ForeColor = System.Drawing.Color.Gray;
+            this.txtHourOut.Location = new System.Drawing.Point(400, 98);
+            this.txtHourOut.Name = "txtHourOut";
+            this.txtHourOut.Size = new System.Drawing.Size(84, 20);
+            this.txtHourOut.TabIndex = 14;
+            this.txtHourOut.Text = "HH";
+            this.txtHourOut.TextChanged += new System.EventHandler(this.txtHour_TextChanged_1);
+            this.txtHourOut.Enter += new System.EventHandler(this.txtBoxEnter);
+            this.txtHourOut.Leave += new System.EventHandler(this.txtBoxLeave);
+            // 
+            // txtMinuteOut
+            // 
+            this.txtMinuteOut.ForeColor = System.Drawing.Color.Gray;
+            this.txtMinuteOut.Location = new System.Drawing.Point(511, 98);
+            this.txtMinuteOut.Name = "txtMinuteOut";
+            this.txtMinuteOut.Size = new System.Drawing.Size(80, 20);
+            this.txtMinuteOut.TabIndex = 15;
+            this.txtMinuteOut.Text = "MM";
+            this.txtMinuteOut.TextChanged += new System.EventHandler(this.txtMinute_TextChanged);
+            this.txtMinuteOut.Enter += new System.EventHandler(this.txtBoxEnter);
+            this.txtMinuteOut.Leave += new System.EventHandler(this.txtBoxLeave);
+            // 
+            // btnAMPMOut
+            // 
+            this.btnAMPMOut.BackColor = System.Drawing.Color.Gold;
+            this.btnAMPMOut.Location = new System.Drawing.Point(597, 98);
+            this.btnAMPMOut.Name = "btnAMPMOut";
+            this.btnAMPMOut.Size = new System.Drawing.Size(76, 20);
+            this.btnAMPMOut.TabIndex = 17;
+            this.btnAMPMOut.Text = "AM";
+            this.btnAMPMOut.UseVisualStyleBackColor = false;
+            this.btnAMPMOut.Click += new System.EventHandler(this.btnAMPM_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(490, 101);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(10, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = ":";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(344, 102);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(16, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "to";
             // 
             // chbxIncludeDate
             // 
@@ -184,52 +238,6 @@
             this.label3.Size = new System.Drawing.Size(10, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = ":";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(344, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "to";
-            // 
-            // txtHourOut
-            // 
-            this.txtHourOut.ForeColor = System.Drawing.Color.Gray;
-            this.txtHourOut.Location = new System.Drawing.Point(400, 98);
-            this.txtHourOut.Name = "txtHourOut";
-            this.txtHourOut.Size = new System.Drawing.Size(84, 20);
-            this.txtHourOut.TabIndex = 14;
-            this.txtHourOut.Text = "HH";
-            // 
-            // txtMinuteOut
-            // 
-            this.txtMinuteOut.ForeColor = System.Drawing.Color.Gray;
-            this.txtMinuteOut.Location = new System.Drawing.Point(511, 98);
-            this.txtMinuteOut.Name = "txtMinuteOut";
-            this.txtMinuteOut.Size = new System.Drawing.Size(80, 20);
-            this.txtMinuteOut.TabIndex = 15;
-            this.txtMinuteOut.Text = "MM";
-            // 
-            // btnAMPMOut
-            // 
-            this.btnAMPMOut.BackColor = System.Drawing.Color.Gold;
-            this.btnAMPMOut.Location = new System.Drawing.Point(597, 98);
-            this.btnAMPMOut.Name = "btnAMPMOut";
-            this.btnAMPMOut.Size = new System.Drawing.Size(76, 20);
-            this.btnAMPMOut.TabIndex = 17;
-            this.btnAMPMOut.Text = "AM";
-            this.btnAMPMOut.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(490, 101);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(10, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = ":";
             // 
             // frmViewReservations
             // 

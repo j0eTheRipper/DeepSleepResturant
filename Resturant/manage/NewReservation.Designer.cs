@@ -31,15 +31,20 @@
             this.lstCustomers = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dntDate = new System.Windows.Forms.DateTimePicker();
-            this.txtHour = new System.Windows.Forms.TextBox();
-            this.txtMinute = new System.Windows.Forms.TextBox();
+            this.txtHourFrom = new System.Windows.Forms.TextBox();
+            this.txtMinuteFrom = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAMPM = new System.Windows.Forms.Button();
+            this.btnAMPMFrom = new System.Windows.Forms.Button();
             this.btnMakeReservation = new System.Windows.Forms.Button();
             this.txtNumberOfPeople = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.grpReservationDetails = new System.Windows.Forms.GroupBox();
+            this.TO = new System.Windows.Forms.Label();
+            this.txtHourTo = new System.Windows.Forms.TextBox();
+            this.txtMinuteTo = new System.Windows.Forms.TextBox();
+            this.btnAMPMTo = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.grpReservationDetails.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +55,7 @@
             this.lstCustomers.Location = new System.Drawing.Point(19, 39);
             this.lstCustomers.Margin = new System.Windows.Forms.Padding(6);
             this.lstCustomers.Name = "lstCustomers";
-            this.lstCustomers.Size = new System.Drawing.Size(341, 172);
+            this.lstCustomers.Size = new System.Drawing.Size(372, 172);
             this.lstCustomers.TabIndex = 0;
             // 
             // label1
@@ -69,32 +74,32 @@
             this.dntDate.Location = new System.Drawing.Point(10, 93);
             this.dntDate.MinDate = new System.DateTime(2024, 5, 14, 0, 0, 0, 0);
             this.dntDate.Name = "dntDate";
-            this.dntDate.Size = new System.Drawing.Size(335, 29);
+            this.dntDate.Size = new System.Drawing.Size(356, 29);
             this.dntDate.TabIndex = 2;
             // 
-            // txtHour
+            // txtHourFrom
             // 
-            this.txtHour.ForeColor = System.Drawing.Color.Gray;
-            this.txtHour.Location = new System.Drawing.Point(38, 128);
-            this.txtHour.Name = "txtHour";
-            this.txtHour.Size = new System.Drawing.Size(84, 29);
-            this.txtHour.TabIndex = 3;
-            this.txtHour.Text = "HH";
-            this.txtHour.TextChanged += new System.EventHandler(this.txtHour_TextChanged_1);
-            this.txtHour.Enter += new System.EventHandler(this.txtBoxEnter);
-            this.txtHour.Leave += new System.EventHandler(this.txtBoxLeave);
+            this.txtHourFrom.ForeColor = System.Drawing.Color.Gray;
+            this.txtHourFrom.Location = new System.Drawing.Point(10, 126);
+            this.txtHourFrom.Name = "txtHourFrom";
+            this.txtHourFrom.Size = new System.Drawing.Size(34, 29);
+            this.txtHourFrom.TabIndex = 3;
+            this.txtHourFrom.Text = "HH";
+            this.txtHourFrom.TextChanged += new System.EventHandler(this.txtHour_TextChanged_1);
+            this.txtHourFrom.Enter += new System.EventHandler(this.txtBoxEnter);
+            this.txtHourFrom.Leave += new System.EventHandler(this.txtBoxLeave);
             // 
-            // txtMinute
+            // txtMinuteFrom
             // 
-            this.txtMinute.ForeColor = System.Drawing.Color.Gray;
-            this.txtMinute.Location = new System.Drawing.Point(149, 128);
-            this.txtMinute.Name = "txtMinute";
-            this.txtMinute.Size = new System.Drawing.Size(80, 29);
-            this.txtMinute.TabIndex = 4;
-            this.txtMinute.Text = "MM";
-            this.txtMinute.TextChanged += new System.EventHandler(this.txtMinute_TextChanged);
-            this.txtMinute.Enter += new System.EventHandler(this.txtBoxEnter);
-            this.txtMinute.Leave += new System.EventHandler(this.txtBoxLeave);
+            this.txtMinuteFrom.ForeColor = System.Drawing.Color.Gray;
+            this.txtMinuteFrom.Location = new System.Drawing.Point(71, 126);
+            this.txtMinuteFrom.Name = "txtMinuteFrom";
+            this.txtMinuteFrom.Size = new System.Drawing.Size(40, 29);
+            this.txtMinuteFrom.TabIndex = 4;
+            this.txtMinuteFrom.Text = "MM";
+            this.txtMinuteFrom.TextChanged += new System.EventHandler(this.txtMinute_TextChanged);
+            this.txtMinuteFrom.Enter += new System.EventHandler(this.txtBoxEnter);
+            this.txtMinuteFrom.Leave += new System.EventHandler(this.txtBoxLeave);
             // 
             // label2
             // 
@@ -108,22 +113,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(128, 131);
+            this.label3.Location = new System.Drawing.Point(50, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 24);
             this.label3.TabIndex = 6;
             this.label3.Text = ":";
             // 
-            // btnAMPM
+            // btnAMPMFrom
             // 
-            this.btnAMPM.BackColor = System.Drawing.Color.Gold;
-            this.btnAMPM.Location = new System.Drawing.Point(235, 126);
-            this.btnAMPM.Name = "btnAMPM";
-            this.btnAMPM.Size = new System.Drawing.Size(76, 31);
-            this.btnAMPM.TabIndex = 7;
-            this.btnAMPM.Text = "AM";
-            this.btnAMPM.UseVisualStyleBackColor = false;
-            this.btnAMPM.Click += new System.EventHandler(this.btnAMPM_Click);
+            this.btnAMPMFrom.BackColor = System.Drawing.Color.Gold;
+            this.btnAMPMFrom.Location = new System.Drawing.Point(117, 126);
+            this.btnAMPMFrom.Name = "btnAMPMFrom";
+            this.btnAMPMFrom.Size = new System.Drawing.Size(49, 31);
+            this.btnAMPMFrom.TabIndex = 7;
+            this.btnAMPMFrom.Text = "AM";
+            this.btnAMPMFrom.UseVisualStyleBackColor = false;
+            this.btnAMPMFrom.Click += new System.EventHandler(this.btnAMPM_Click);
             // 
             // btnMakeReservation
             // 
@@ -140,9 +145,9 @@
             // txtNumberOfPeople
             // 
             this.txtNumberOfPeople.ForeColor = System.Drawing.Color.Black;
-            this.txtNumberOfPeople.Location = new System.Drawing.Point(242, 25);
+            this.txtNumberOfPeople.Location = new System.Drawing.Point(242, 22);
             this.txtNumberOfPeople.Name = "txtNumberOfPeople";
-            this.txtNumberOfPeople.Size = new System.Drawing.Size(103, 29);
+            this.txtNumberOfPeople.Size = new System.Drawing.Size(124, 29);
             this.txtNumberOfPeople.TabIndex = 9;
             // 
             // label4
@@ -156,26 +161,84 @@
             // 
             // grpReservationDetails
             // 
+            this.grpReservationDetails.Controls.Add(this.txtHourTo);
+            this.grpReservationDetails.Controls.Add(this.txtMinuteTo);
+            this.grpReservationDetails.Controls.Add(this.btnAMPMTo);
+            this.grpReservationDetails.Controls.Add(this.label5);
+            this.grpReservationDetails.Controls.Add(this.TO);
             this.grpReservationDetails.Controls.Add(this.label4);
             this.grpReservationDetails.Controls.Add(this.dntDate);
             this.grpReservationDetails.Controls.Add(this.txtNumberOfPeople);
-            this.grpReservationDetails.Controls.Add(this.txtHour);
-            this.grpReservationDetails.Controls.Add(this.txtMinute);
-            this.grpReservationDetails.Controls.Add(this.btnAMPM);
+            this.grpReservationDetails.Controls.Add(this.txtHourFrom);
+            this.grpReservationDetails.Controls.Add(this.txtMinuteFrom);
+            this.grpReservationDetails.Controls.Add(this.btnAMPMFrom);
             this.grpReservationDetails.Controls.Add(this.label2);
             this.grpReservationDetails.Controls.Add(this.label3);
             this.grpReservationDetails.Location = new System.Drawing.Point(15, 220);
             this.grpReservationDetails.Name = "grpReservationDetails";
-            this.grpReservationDetails.Size = new System.Drawing.Size(351, 166);
+            this.grpReservationDetails.Size = new System.Drawing.Size(376, 166);
             this.grpReservationDetails.TabIndex = 11;
             this.grpReservationDetails.TabStop = false;
             this.grpReservationDetails.Text = "Reservation Details";
+            // 
+            // TO
+            // 
+            this.TO.AutoSize = true;
+            this.TO.Location = new System.Drawing.Point(171, 131);
+            this.TO.Name = "TO";
+            this.TO.Size = new System.Drawing.Size(33, 24);
+            this.TO.TabIndex = 11;
+            this.TO.Text = "To";
+            // 
+            // txtHourTo
+            // 
+            this.txtHourTo.ForeColor = System.Drawing.Color.Gray;
+            this.txtHourTo.Location = new System.Drawing.Point(210, 126);
+            this.txtHourTo.Name = "txtHourTo";
+            this.txtHourTo.Size = new System.Drawing.Size(34, 29);
+            this.txtHourTo.TabIndex = 12;
+            this.txtHourTo.Text = "HH";
+            this.txtHourTo.TextChanged += new System.EventHandler(this.txtHour_TextChanged_1);
+            this.txtHourTo.Enter += new System.EventHandler(this.txtBoxEnter);
+            this.txtHourTo.Leave += new System.EventHandler(this.txtBoxLeave);
+            // 
+            // txtMinuteTo
+            // 
+            this.txtMinuteTo.ForeColor = System.Drawing.Color.Gray;
+            this.txtMinuteTo.Location = new System.Drawing.Point(271, 126);
+            this.txtMinuteTo.Name = "txtMinuteTo";
+            this.txtMinuteTo.Size = new System.Drawing.Size(40, 29);
+            this.txtMinuteTo.TabIndex = 13;
+            this.txtMinuteTo.Text = "MM";
+            this.txtMinuteTo.TextChanged += new System.EventHandler(this.txtMinute_TextChanged);
+            this.txtMinuteTo.Enter += new System.EventHandler(this.txtBoxEnter);
+            this.txtMinuteTo.Leave += new System.EventHandler(this.txtBoxLeave);
+            // 
+            // btnAMPMTo
+            // 
+            this.btnAMPMTo.BackColor = System.Drawing.Color.Gold;
+            this.btnAMPMTo.Location = new System.Drawing.Point(317, 126);
+            this.btnAMPMTo.Name = "btnAMPMTo";
+            this.btnAMPMTo.Size = new System.Drawing.Size(49, 31);
+            this.btnAMPMTo.TabIndex = 15;
+            this.btnAMPMTo.Text = "AM";
+            this.btnAMPMTo.UseVisualStyleBackColor = false;
+            this.btnAMPMTo.Click += new System.EventHandler(this.btnAMPM_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(250, 129);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(15, 24);
+            this.label5.TabIndex = 14;
+            this.label5.Text = ":";
             // 
             // NewReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 444);
+            this.ClientSize = new System.Drawing.Size(406, 444);
             this.Controls.Add(this.grpReservationDetails);
             this.Controls.Add(this.btnMakeReservation);
             this.Controls.Add(this.label1);
@@ -198,14 +261,19 @@
         private System.Windows.Forms.ListBox lstCustomers;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dntDate;
-        private System.Windows.Forms.TextBox txtHour;
-        private System.Windows.Forms.TextBox txtMinute;
+        private System.Windows.Forms.TextBox txtHourFrom;
+        private System.Windows.Forms.TextBox txtMinuteFrom;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAMPM;
+        private System.Windows.Forms.Button btnAMPMFrom;
         private System.Windows.Forms.Button btnMakeReservation;
         private System.Windows.Forms.TextBox txtNumberOfPeople;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox grpReservationDetails;
+        private System.Windows.Forms.Label TO;
+        private System.Windows.Forms.TextBox txtHourTo;
+        private System.Windows.Forms.TextBox txtMinuteTo;
+        private System.Windows.Forms.Button btnAMPMTo;
+        private System.Windows.Forms.Label label5;
     }
 }

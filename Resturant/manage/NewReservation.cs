@@ -41,33 +41,33 @@ namespace Resturant
 
         private void btnAMPM_Click(object sender, EventArgs e)
         {
-            if (btnAMPM.Text == "AM")
+            if (btnAMPMFrom.Text == "AM")
             {
-                btnAMPM.Text = "PM";
-                btnAMPM.BackColor = Color.MidnightBlue;
-                btnAMPM.ForeColor = Color.White;
+                btnAMPMFrom.Text = "PM";
+                btnAMPMFrom.BackColor = Color.MidnightBlue;
+                btnAMPMFrom.ForeColor = Color.White;
             } else
             {
-                btnAMPM.Text = "AM";
-                btnAMPM.BackColor = Color.Yellow;
-                btnAMPM.ForeColor = Color.Black;
+                btnAMPMFrom.Text = "AM";
+                btnAMPMFrom.BackColor = Color.Yellow;
+                btnAMPMFrom.ForeColor = Color.Black;
             }
         }
 
         private void txtHour_TextChanged_1(object sender, EventArgs e)
         {
             int input;
-            int.TryParse(txtHour.Text, out input);
-            if ((input == 0 || input > 12) && txtHour.ForeColor != Color.Gray)
-                txtHour.Text = "";
+            int.TryParse(txtHourFrom.Text, out input);
+            if ((input == 0 || input > 12) && txtHourFrom.ForeColor != Color.Gray)
+                txtHourFrom.Text = "";
         }
 
         private void txtMinute_TextChanged(object sender, EventArgs e)
         {
             int input;
-            int.TryParse(txtMinute.Text, out input);
-            if ((input == 0 || input > 59) && txtMinute.ForeColor != Color.Gray)
-                txtMinute.Text = "";
+            int.TryParse(txtMinuteFrom.Text, out input);
+            if ((input == 0 || input > 59) && txtMinuteFrom.ForeColor != Color.Gray)
+                txtMinuteFrom.Text = "";
         }
 
         private void NewReservation_Load(object sender, EventArgs e)
@@ -88,33 +88,33 @@ namespace Resturant
         private void button1_Click(object sender, EventArgs e)
         {
             string date = dntDate.Value.ToString("yyyy-MM-dd");
-            string time = $"{txtHour.Text}:{txtMinute.Text}";
+            string inTime = Get24HourFormat(txtHourFrom, txtMinuteFrom, btnAMPMFrom);
+            string outTime = Get24HourFormat(txtHourTo, txtMinuteTo, btnAMPMTo);
             object username = lstCustomers.SelectedItem;
             int numberOfPeople;
             int.TryParse(txtNumberOfPeople.Text, out numberOfPeople);
 
-            if (time == "HH:MM" || username == null || numberOfPeople == 0)
+            if (inTime == null || outTime == null || username == null || numberOfPeople == 0)
                 MessageBox.Show("please select a customer and specify a date and time");
             else
             {
-                if (btnAMPM.Text == "PM" && txtHour.Text != "12")
+                if (btnAMPMFrom.Text == "PM" && txtHourFrom.Text != "12")
                 {
-                    int hour = int.Parse(txtHour.Text) + 12;
-                    time = $"{hour}:{txtMinute.Text}";
+                    int hour = int.Parse(txtHourFrom.Text) + 12;
+                    inTime = $"{hour}:{txtMinuteFrom.Text}";
                 }
-                if (btnAMPM.Text == "AM" && txtHour.Text == "12")
-                    time = $"0:{txtMinute.Text}";
+                if (btnAMPMFrom.Text == "AM" && txtHourFrom.Text == "12")
+                    inTime = $"0:{txtMinuteFrom.Text}";
 
-                Reservation reservation = new Reservation(customerIDs[lstCustomers.SelectedIndex], numberOfPeople, date, time);
+                Reservation reservation = new Reservation(customerIDs[lstCustomers.SelectedIndex], numberOfPeople, date, inTime, outTime);
                 Table table = reservation.SearchForTable();
                 if (table != null)
                 {
-                    table.Reserve();
                     reservation.UpdateReservationsTable(table);
                     bool isSuccess = reservation.UpdateCustomersTable();
                     lstCustomers.Items.Remove(lstCustomers.SelectedItem);
                     if (isSuccess)
-                        MessageBox.Show($"Successfully reserved table {table.TableID} for {username}. Reservation will be at {date}, {time}.");
+                        MessageBox.Show($"Successfully reserved table {table.TableID} for {username}. Reservation will be at {date}, {inTime}.");
                     else
                         MessageBox.Show("Something went wrong!!");
                 }
@@ -123,6 +123,20 @@ namespace Resturant
                     MessageBox.Show("There is no available table at the moment or the number of people is too high to accomodate.");
                 }
             }
+        }
+
+        private string Get24HourFormat(TextBox txtHour, TextBox txtMinute, Button btnAMPM)
+        {
+            if (txtHour.Text != "HH" && txtMinute.Text != "MM")
+            {
+                int.TryParse(txtHour.Text, out int hour);
+                if (btnAMPM.Text == "PM" && hour != 12)
+                    hour += 12;
+                if (btnAMPM.Text == "AM" && hour == 12)
+                    hour = 0;
+                return $"{hour}:{txtMinute.Text}";
+            }
+            return null;
         }
     }
 }

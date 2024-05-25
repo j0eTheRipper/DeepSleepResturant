@@ -34,15 +34,16 @@ namespace Resturant.manage
             if (textBox.Text == "")
             {
                 textBox.ForeColor = Color.Gray;
-                textBox.Text = textBox.Name == "txtHour" ? "HH" : "MM";
+                textBox.Text = textBox.Name.StartsWith("txtHour") ? "HH" : "MM";
             }
         }
 
         private void txtHour_TextChanged_1(object sender, EventArgs e)
         {
             int input;
-            int.TryParse(txtHourIn.Text, out input);
-            if ((input == 0 || input > 12) && txtHourIn.ForeColor != Color.Gray)
+            TextBox hour = (TextBox)sender;
+            int.TryParse(hour.Text, out input);
+            if ((input == 0 || input > 12) && hour.ForeColor != Color.Gray)
                 txtHourIn.Text = "";
         }
 
@@ -50,7 +51,8 @@ namespace Resturant.manage
         {
             int input;
             int.TryParse(txtMinuteIn.Text, out input);
-            if ((input == 0 || input > 59) && txtMinuteIn.ForeColor != Color.Gray)
+            TextBox minute = (TextBox)sender;
+            if ((input == 0 || input > 59) && txtMinuteIn.ForeColor != Color.Gray && minute.Text != "0")
                 txtMinuteIn.Text = "";
         }
 
@@ -73,26 +75,28 @@ namespace Resturant.manage
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string date = dntDate.Value.ToString("yyyy-MM-dd");
-            string timeIn = Get24HourFormat(txtHourIn, txtMinuteIn);
-            string timeOut = Get24HourFormat(txtHourOut, txtMinuteOut);
+            string timeIn = Get24HourFormat(txtHourIn, txtMinuteIn, btnAMPMIn);
+            string timeOut = Get24HourFormat(txtHourOut, txtMinuteOut, btnAMPMOut);
             int.TryParse(txtNumberOfPeople.Text, out int numberOfPeople);
 
             string query = "SELECT * FROM reservations ";
             string whereClause = "WHERE ";
             if (chbxIncludeDate.Checked)
-                whereClause += $"date = '{date}' and ";
+                whereClause += $"reservationDate >= '{date}' and ";
             if (timeIn != null)
-                whereClause += $"time = '{timeIn}' and ";
+                whereClause += $"reservationStartTime >= '{timeIn}' and ";
             if (timeOut != null)
-                whereClause += $"timeOut = '{timeOut}' and ";
+                whereClause += $"reservationEndTime <= '{timeOut}' and ";
             if (numberOfPeople != 0)
                 whereClause += $"tableID in (select tableID from Tables where numberOfSeats >= {numberOfPeople});";
             else
                 whereClause += "reservationID is not null;";
 
+            query += whereClause;
+
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
             {
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM reservations;", connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
@@ -100,17 +104,16 @@ namespace Resturant.manage
             }
         }
 
-        private string Get24HourFormat(TextBox txtHour, TextBox txtMinute)
+        private string Get24HourFormat(TextBox txtHour, TextBox txtMinute, Button btnAMPM)
         {
             if (txtHour.Text != "HH" && txtMinute.Text != "MM")
             {
                 int.TryParse(txtHour.Text, out int hour);
-                if (btnAMPMIn.Text == "PM" && hour != 12)
+                if (btnAMPM.Text == "PM" && hour != 12)
                     hour += 12;
-                if (hour == 24)
+                if (btnAMPM.Text == "AM" && hour == 12)
                     hour = 0;
-
-                return $"{hour}:{txtMinuteIn.Text}";
+                return $"{hour}:{txtMinute.Text}";
             }
             return null;
         }

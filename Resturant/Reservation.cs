@@ -13,21 +13,25 @@ namespace Resturant
         private int id, customerID, numberOfPeople;
         Table table;
         private string date;
-        private string time;
+        private string inTime, outTime;
 
-        public Reservation(int customerID, int numberOfPeople, string date, string time)
+        public Reservation(int customerID, int numberOfPeople, string date, string time, string outTime)
         {
             this.customerID = customerID;
             this.numberOfPeople = numberOfPeople;
             this.date = date;
-            this.time = time;
+            this.inTime = time;
+            this.outTime = outTime;
         }
 
         public Table SearchForTable()
         {
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
             {
-                SqlCommand cmd = new SqlCommand($"SELECT tableID FROM Tables WHERE isReserved = 0 and numberOfSeats >= {numberOfPeople};");
+                SqlCommand cmd = new SqlCommand($"SELECT Tables.tableID FROM Tables left join reservations on reservations.tableID = Tables.tableID" +
+                    $" WHERE ((reservations.reservationDate <> '{date}' or reservationDate is null) or " +
+                    $"(reservationStartTime > '{outTime}') or (reservationEndTime < '{inTime}')) and " +
+                    $"Tables.numberOfSeats >= {numberOfPeople};");
                 connection.Open();
                 cmd.Connection = connection;
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -54,7 +58,7 @@ namespace Resturant
         {
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
             {
-                SqlCommand saveReservation = new SqlCommand($"INSERT INTO reservations (tableID, customerID, date, time) VALUES ({table.TableID}, {customerID}, '{date}', '{time}'); SELECT CAST(scope_identity() as int);", connection);
+                SqlCommand saveReservation = new SqlCommand($"INSERT INTO reservations (tableID, customerID, reservationDate, reservationStartTime, reservationEndTime) VALUES ({table.TableID}, {customerID}, '{date}', '{inTime}', '{outTime}'); SELECT CAST(scope_identity() as int);", connection);
                 connection.Open();
                 this.id = (int) saveReservation.ExecuteScalar();
                 this.table = table;
