@@ -82,8 +82,8 @@ namespace Resturant
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            cOrderReservation COR2 = new cOrderReservation();
-            COR2.Show();
+            //cOrderReservation COR2 = new cOrderReservation();
+            //COR2.Show();
         }
     }
 }
