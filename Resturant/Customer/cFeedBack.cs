@@ -13,7 +13,6 @@ namespace Resturant.Customer
     public partial class cFeedBack : Form
     {
         private object txtFeedback;
-        private Feedback cFeedBack;
 
         public cFeedBack()
         {
@@ -28,7 +27,7 @@ namespace Resturant.Customer
         private void button1_Click(object sender, EventArgs e)
         {
             int customerId;
-            if (int.TryParse(txtCustomerId.Text, out CustomerId) && !String.IsNullOrWhiteSpace(txtFeedback.Text))
+            /*if (int.TryParse(txtCustomerId.Text, out CustomerId) && !String.IsNullOrWhiteSpace(txtFeedback.Text))
             {
                 cFeedBack = new Feedback
                 {
@@ -36,7 +35,7 @@ namespace Resturant.Customer
                     FeedbackText = txtFeddback.Text
                 };
 
-            }
+            }*/
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
