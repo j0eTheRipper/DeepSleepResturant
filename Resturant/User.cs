@@ -7,7 +7,7 @@ namespace Resturant
     internal class User
     {
         public string username, password, email, role;
-        private static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\j0eTh\\source\\repos\\Resturant\\Resturant\\Database1.mdf;Integrated Security=True";
+        private static string connectionString = Properties.Settings.Default.YoussefConnection;
         private User()
         {
             
