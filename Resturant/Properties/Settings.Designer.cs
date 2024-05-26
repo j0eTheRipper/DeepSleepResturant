@@ -36,8 +36,8 @@ namespace Resturant.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\Source\\Repos\\am" +
-            "marbamtraf\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\j0eTh\\source\\repos\\R" +
+            "esturant\\Resturant\\Database1.mdf;Integrated Security=True")]
         public string YoussefConnection {
             get {
                 return ((string)(this["YoussefConnection"]));
