@@ -155,6 +155,19 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="manage\AddCatagory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage\AddCatagory.Designer.cs">
+      <DependentUpon>AddCatagory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage\AddNewItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage\AddNewItem.Designer.cs">
+      <DependentUpon>AddNewItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Catagory.cs" />
     <Compile Include="manage\frmViewReservations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,17 +180,25 @@
     <Compile Include="manage\ManagerMainPage.Designer.cs">
       <DependentUpon>ManagerMainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="manage\MenuItem.cs" />
     <Compile Include="manage\NewReservation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="manage\NewReservation.Designer.cs">
       <DependentUpon>NewReservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="manage\RecordAdder.cs" />
     <Compile Include="manage\ReservationDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="manage\ReservationDetails.Designer.cs">
       <DependentUpon>ReservationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage\ViewAndEditItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage\ViewAndEditItems.Designer.cs">
+      <DependentUpon>ViewAndEditItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -224,6 +245,12 @@
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="manage\AddCatagory.resx">
+      <DependentUpon>AddCatagory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage\AddNewItem.resx">
+      <DependentUpon>AddNewItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="manage\frmViewReservations.resx">
       <DependentUpon>frmViewReservations.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manage\ReservationDetails.resx">
       <DependentUpon>ReservationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage\ViewAndEditItems.resx">
+      <DependentUpon>ViewAndEditItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
