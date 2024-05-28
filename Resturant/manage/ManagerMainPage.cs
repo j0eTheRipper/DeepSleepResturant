@@ -39,5 +39,11 @@ namespace Resturant
             frmViewReservations frm = new frmViewReservations();
             frm.ShowDialog();
         }
+
+        private void lnkMenu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AddNewItem addNewItem = new AddNewItem();
+            addNewItem.ShowDialog();
+        }
     }
 }

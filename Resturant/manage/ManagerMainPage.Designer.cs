@@ -54,6 +54,7 @@
             this.lnkMenu.TabIndex = 3;
             this.lnkMenu.TabStop = true;
             this.lnkMenu.Text = "Manage Menu";
+            this.lnkMenu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMenu_LinkClicked);
             // 
             // lnkReservationRequest
             // 
