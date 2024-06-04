@@ -28,44 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnAddItem = new System.Windows.Forms.Button();
+            this.menuFilter1 = new Resturant.manage.MenuFilter();
             this.SuspendLayout();
             // 
-            // listBox1
+            // btnAddItem
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(13, 13);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(144, 199);
-            this.listBox1.TabIndex = 0;
+            this.btnAddItem.Location = new System.Drawing.Point(13, 415);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(144, 23);
+            this.btnAddItem.TabIndex = 2;
+            this.btnAddItem.Text = "Add Items";
+            this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
-            // pictureBox1
+            // menuFilter1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(164, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(308, 199);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.menuFilter1.Location = new System.Drawing.Point(13, 13);
+            this.menuFilter1.Name = "menuFilter1";
+            this.menuFilter1.Size = new System.Drawing.Size(458, 249);
+            this.menuFilter1.TabIndex = 3;
             // 
             // ViewAndEditItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(483, 450);
+            this.Controls.Add(this.menuFilter1);
+            this.Controls.Add(this.btnAddItem);
             this.Name = "ViewAndEditItems";
             this.Text = "ViewAndEditItems";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAddItem;
+        private MenuFilter menuFilter1;
     }
 }

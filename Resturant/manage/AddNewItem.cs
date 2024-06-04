@@ -43,7 +43,7 @@ namespace Resturant.manage
         {
             if (txtName.Text != null && cmbCatagories.SelectedItem != null && txtPrice.Text != null && path != null)
             {
-                MenuItem item = new MenuItem(txtName.Text, cmbCatagories.SelectedItem.ToString(), float.Parse(txtPrice.Text), path);
+                MenuItem item = new MenuItem(txtName.Text, cmbCatagories.SelectedItem.ToString(), decimal.Parse(txtPrice.Text), path);
                 bool isSuccesful = item.Upload();
                 if (isSuccesful)
                 {
