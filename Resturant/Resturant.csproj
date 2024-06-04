@@ -176,6 +176,12 @@
     <Compile Include="manage\ManagerMainPage.Designer.cs">
       <DependentUpon>ManagerMainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="manage\MenuFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manage\MenuFilter.Designer.cs">
+      <DependentUpon>MenuFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="manage\MenuItem.cs" />
     <Compile Include="manage\NewReservation.cs">
       <SubType>Form</SubType>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manage\ManagerMainPage.resx">
       <DependentUpon>ManagerMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage\MenuFilter.resx">
+      <DependentUpon>MenuFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manage\NewReservation.resx">
       <DependentUpon>NewReservation.cs</DependentUpon>

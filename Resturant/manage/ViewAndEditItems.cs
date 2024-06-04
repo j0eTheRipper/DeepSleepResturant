@@ -16,5 +16,12 @@ namespace Resturant.manage
         {
             InitializeComponent();
         }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            AddNewItem frmItemAdder = new AddNewItem();
+            frmItemAdder.ShowDialog();
+            menuFilter1.FillMenuListBox();
+        }
     }
 }

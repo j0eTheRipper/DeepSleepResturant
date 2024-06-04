@@ -42,8 +42,8 @@ namespace Resturant
 
         private void lnkMenu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AddNewItem addNewItem = new AddNewItem();
-            addNewItem.ShowDialog();
+            ViewAndEditItems frmView = new ViewAndEditItems();
+            frmView.ShowDialog();
         }
     }
 }
