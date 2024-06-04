@@ -30,131 +30,190 @@
         {
             this.lblViewOrderPage = new System.Windows.Forms.Label();
             this.btnBackOrd = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblOrderNo = new System.Windows.Forms.Label();
-            this.lblCustOrder = new System.Windows.Forms.Label();
-            this.lblCustName = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lblshowDate = new System.Windows.Forms.Label();
+            this.lblTotalShow = new System.Windows.Forms.Label();
+            this.lblCustomerID = new System.Windows.Forms.Label();
+            this.lblOrderDate = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.lblCustID = new System.Windows.Forms.Label();
+            this.ViewList = new System.Windows.Forms.ListBox();
             this.btnView = new System.Windows.Forms.Button();
+            this.lblOrderStatus = new System.Windows.Forms.Label();
+            this.lblStatusShow = new System.Windows.Forms.Label();
+            this.OrderDetails = new System.Windows.Forms.GroupBox();
+            this.OrderDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblViewOrderPage
             // 
             this.lblViewOrderPage.AutoSize = true;
             this.lblViewOrderPage.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewOrderPage.Location = new System.Drawing.Point(333, 18);
+            this.lblViewOrderPage.Location = new System.Drawing.Point(706, 15);
+            this.lblViewOrderPage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblViewOrderPage.Name = "lblViewOrderPage";
-            this.lblViewOrderPage.Size = new System.Drawing.Size(155, 31);
+            this.lblViewOrderPage.Size = new System.Drawing.Size(130, 26);
             this.lblViewOrderPage.TabIndex = 19;
             this.lblViewOrderPage.Text = "View Orders";
             // 
             // btnBackOrd
             // 
-            this.btnBackOrd.BackColor = System.Drawing.Color.Tan;
-            this.btnBackOrd.Location = new System.Drawing.Point(700, 400);
+            this.btnBackOrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(114)))), ((int)(((byte)(45)))));
+            this.btnBackOrd.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackOrd.Location = new System.Drawing.Point(876, 459);
+            this.btnBackOrd.Margin = new System.Windows.Forms.Padding(2);
             this.btnBackOrd.Name = "btnBackOrd";
-            this.btnBackOrd.Size = new System.Drawing.Size(75, 23);
+            this.btnBackOrd.Size = new System.Drawing.Size(76, 31);
             this.btnBackOrd.TabIndex = 18;
             this.btnBackOrd.Text = "Back>";
             this.btnBackOrd.UseVisualStyleBackColor = false;
             this.btnBackOrd.Click += new System.EventHandler(this.btnBackOrd_Click);
             // 
-            // label3
+            // lblshowDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(184, 407);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 16);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "order number will show her";
+            this.lblshowDate.AutoSize = true;
+            this.lblshowDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblshowDate.Location = new System.Drawing.Point(250, 176);
+            this.lblshowDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblshowDate.Name = "lblshowDate";
+            this.lblshowDate.Size = new System.Drawing.Size(2, 15);
+            this.lblshowDate.TabIndex = 17;
+            this.lblshowDate.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label2
+            // lblTotalShow
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(184, 358);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 16);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "order will show here";
+            this.lblTotalShow.AutoSize = true;
+            this.lblTotalShow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalShow.Location = new System.Drawing.Point(250, 115);
+            this.lblTotalShow.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalShow.Name = "lblTotalShow";
+            this.lblTotalShow.Size = new System.Drawing.Size(2, 15);
+            this.lblTotalShow.TabIndex = 16;
+            this.lblTotalShow.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label1
+            // lblCustomerID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(184, 312);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 16);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "customer name will show here";
+            this.lblCustomerID.AutoSize = true;
+            this.lblCustomerID.BackColor = System.Drawing.Color.White;
+            this.lblCustomerID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCustomerID.Location = new System.Drawing.Point(250, 47);
+            this.lblCustomerID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCustomerID.Name = "lblCustomerID";
+            this.lblCustomerID.Size = new System.Drawing.Size(2, 15);
+            this.lblCustomerID.TabIndex = 15;
+            this.lblCustomerID.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lblOrderNo
+            // lblOrderDate
             // 
-            this.lblOrderNo.AutoSize = true;
-            this.lblOrderNo.Location = new System.Drawing.Point(35, 407);
-            this.lblOrderNo.Name = "lblOrderNo";
-            this.lblOrderNo.Size = new System.Drawing.Size(92, 16);
-            this.lblOrderNo.TabIndex = 14;
-            this.lblOrderNo.Text = "Order Number";
+            this.lblOrderDate.AutoSize = true;
+            this.lblOrderDate.Location = new System.Drawing.Point(22, 177);
+            this.lblOrderDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOrderDate.Name = "lblOrderDate";
+            this.lblOrderDate.Size = new System.Drawing.Size(59, 13);
+            this.lblOrderDate.TabIndex = 14;
+            this.lblOrderDate.Text = "Order Date";
             // 
-            // lblCustOrder
+            // lblTotalPrice
             // 
-            this.lblCustOrder.AutoSize = true;
-            this.lblCustOrder.Location = new System.Drawing.Point(35, 358);
-            this.lblCustOrder.Name = "lblCustOrder";
-            this.lblCustOrder.Size = new System.Drawing.Size(111, 16);
-            this.lblCustOrder.TabIndex = 13;
-            this.lblCustOrder.Text = "Customer\'s Order";
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Location = new System.Drawing.Point(22, 106);
+            this.lblTotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(58, 13);
+            this.lblTotalPrice.TabIndex = 13;
+            this.lblTotalPrice.Text = "Total Price";
             // 
-            // lblCustName
+            // lblCustID
             // 
-            this.lblCustName.AutoSize = true;
-            this.lblCustName.Location = new System.Drawing.Point(35, 312);
-            this.lblCustName.Name = "lblCustName";
-            this.lblCustName.Size = new System.Drawing.Size(104, 16);
-            this.lblCustName.TabIndex = 12;
-            this.lblCustName.Text = "Customer Name";
+            this.lblCustID.AutoSize = true;
+            this.lblCustID.Location = new System.Drawing.Point(16, 47);
+            this.lblCustID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCustID.Name = "lblCustID";
+            this.lblCustID.Size = new System.Drawing.Size(65, 13);
+            this.lblCustID.TabIndex = 12;
+            this.lblCustID.Text = "Customer ID";
             // 
-            // listBox1
+            // ViewList
             // 
-            this.listBox1.BackColor = System.Drawing.Color.Tan;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(25, 88);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(283, 132);
-            this.listBox1.TabIndex = 11;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.ViewList.BackColor = System.Drawing.Color.White;
+            this.ViewList.FormattingEnabled = true;
+            this.ViewList.Location = new System.Drawing.Point(23, 58);
+            this.ViewList.Margin = new System.Windows.Forms.Padding(2);
+            this.ViewList.Name = "ViewList";
+            this.ViewList.Size = new System.Drawing.Size(391, 433);
+            this.ViewList.TabIndex = 11;
+            this.ViewList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnView
             // 
-            this.btnView.BackColor = System.Drawing.Color.Tan;
-            this.btnView.Location = new System.Drawing.Point(567, 382);
+            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(114)))), ((int)(((byte)(45)))));
+            this.btnView.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.Location = new System.Drawing.Point(442, 453);
+            this.btnView.Margin = new System.Windows.Forms.Padding(2);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(85, 50);
+            this.btnView.Size = new System.Drawing.Size(82, 26);
             this.btnView.TabIndex = 10;
             this.btnView.Text = "View Order";
             this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // lblOrderStatus
+            // 
+            this.lblOrderStatus.AutoSize = true;
+            this.lblOrderStatus.Location = new System.Drawing.Point(22, 239);
+            this.lblOrderStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOrderStatus.Name = "lblOrderStatus";
+            this.lblOrderStatus.Size = new System.Drawing.Size(66, 13);
+            this.lblOrderStatus.TabIndex = 20;
+            this.lblOrderStatus.Text = "Order Status";
+            // 
+            // lblStatusShow
+            // 
+            this.lblStatusShow.AutoSize = true;
+            this.lblStatusShow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblStatusShow.Location = new System.Drawing.Point(250, 239);
+            this.lblStatusShow.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStatusShow.Name = "lblStatusShow";
+            this.lblStatusShow.Size = new System.Drawing.Size(2, 15);
+            this.lblStatusShow.TabIndex = 21;
+            // 
+            // OrderDetails
+            // 
+            this.OrderDetails.BackColor = System.Drawing.Color.White;
+            this.OrderDetails.Controls.Add(this.lblCustID);
+            this.OrderDetails.Controls.Add(this.lblStatusShow);
+            this.OrderDetails.Controls.Add(this.lblTotalPrice);
+            this.OrderDetails.Controls.Add(this.lblOrderStatus);
+            this.OrderDetails.Controls.Add(this.lblOrderDate);
+            this.OrderDetails.Controls.Add(this.lblshowDate);
+            this.OrderDetails.Controls.Add(this.lblCustomerID);
+            this.OrderDetails.Controls.Add(this.lblTotalShow);
+            this.OrderDetails.Location = new System.Drawing.Point(464, 81);
+            this.OrderDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.OrderDetails.Name = "OrderDetails";
+            this.OrderDetails.Padding = new System.Windows.Forms.Padding(2);
+            this.OrderDetails.Size = new System.Drawing.Size(478, 315);
+            this.OrderDetails.TabIndex = 22;
+            this.OrderDetails.TabStop = false;
+            this.OrderDetails.Text = "Order Details";
             // 
             // View_Orders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Sienna;
-            this.ClientSize = new System.Drawing.Size(796, 448);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(114)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(962, 500);
+            this.Controls.Add(this.OrderDetails);
             this.Controls.Add(this.lblViewOrderPage);
             this.Controls.Add(this.btnBackOrd);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblOrderNo);
-            this.Controls.Add(this.lblCustOrder);
-            this.Controls.Add(this.lblCustName);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.ViewList);
             this.Controls.Add(this.btnView);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "View_Orders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View_Orders";
+            this.Load += new System.EventHandler(this.View_Orders_Load);
+            this.OrderDetails.ResumeLayout(false);
+            this.OrderDetails.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,13 +223,16 @@
 
         private System.Windows.Forms.Label lblViewOrderPage;
         private System.Windows.Forms.Button btnBackOrd;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblOrderNo;
-        private System.Windows.Forms.Label lblCustOrder;
-        private System.Windows.Forms.Label lblCustName;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label lblshowDate;
+        private System.Windows.Forms.Label lblTotalShow;
+        private System.Windows.Forms.Label lblCustomerID;
+        private System.Windows.Forms.Label lblOrderDate;
+        private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.Label lblCustID;
+        private System.Windows.Forms.ListBox ViewList;
         private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.Label lblOrderStatus;
+        private System.Windows.Forms.Label lblStatusShow;
+        private System.Windows.Forms.GroupBox OrderDetails;
     }
 }
