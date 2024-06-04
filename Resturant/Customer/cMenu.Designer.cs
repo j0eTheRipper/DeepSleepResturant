@@ -30,13 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnAddthisOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnAddthisOrder
+            // 
+            this.btnAddthisOrder.Location = new System.Drawing.Point(27, 540);
+            this.btnAddthisOrder.Name = "btnAddthisOrder";
+            this.btnAddthisOrder.Size = new System.Drawing.Size(141, 23);
+            this.btnAddthisOrder.TabIndex = 1;
+            this.btnAddthisOrder.Text = "Add This Order";
+            this.btnAddthisOrder.UseVisualStyleBackColor = true;
             // 
             // cMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(114)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(1152, 602);
+            this.Controls.Add(this.btnAddthisOrder);
             this.Name = "cMenu";
             this.Text = "cMenu";
             this.Load += new System.EventHandler(this.cMenu_Load);
@@ -47,5 +59,6 @@
         #endregion
 
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnAddthisOrder;
     }
 }

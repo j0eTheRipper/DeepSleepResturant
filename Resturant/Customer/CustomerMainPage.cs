@@ -46,7 +46,7 @@ namespace Resturant
 
         private void View_order_Click(object sender, EventArgs e)
         {
-            cViewOrder_Reservation CV2 = new cViewOrder_Reservation ();
+            cViewOrder CV2 = new cViewOrder ();
             CV2.Show();
         }
 

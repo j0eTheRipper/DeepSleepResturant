@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnAddthisOrder = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnAddthisOrder
+            // 
+            this.btnAddthisOrder.Location = new System.Drawing.Point(426, 206);
+            this.btnAddthisOrder.Name = "btnAddthisOrder";
+            this.btnAddthisOrder.Size = new System.Drawing.Size(141, 23);
+            this.btnAddthisOrder.TabIndex = 0;
+            this.btnAddthisOrder.Text = "Add This Order";
+            this.btnAddthisOrder.UseVisualStyleBackColor = true;
+            // 
+            // cOrderFood
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(114)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(903, 502);
+            this.Controls.Add(this.btnAddthisOrder);
+            this.Name = "cOrderFood";
             this.Text = "cOrderFood";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnAddthisOrder;
     }
 }
