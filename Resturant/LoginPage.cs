@@ -1,4 +1,5 @@
 ﻿using Resturant.Admin;
+using Resturant.chef;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,6 +62,10 @@ namespace Resturant
                 {
                     ManagerMainPage managerMain = new ManagerMainPage();
                     managerMain.Show();
+                } else if (user.role == "chef")
+                {
+                    ChefMainPage chefMainPage = new ChefMainPage();
+                    chefMainPage.Show();
                 }
                 this.Hide();
             }
