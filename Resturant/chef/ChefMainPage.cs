@@ -44,5 +44,15 @@ namespace Resturant.chef
             
             
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChefMainPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

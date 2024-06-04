@@ -13,9 +13,12 @@ namespace Resturant.chef
 {
     public partial class Ingredient_Inventory : Form
     {
-        public Ingredient_Inventory()
+        private IngredientInventoryClass ingredientClass;
+
+        public Ingredient_Inventory()               
         {
             InitializeComponent();
+            ingredientClass = new IngredientInventoryClass();
         }
 
         private void Ingredient_Inventory_Load(object sender, EventArgs e)
@@ -40,96 +43,46 @@ namespace Resturant.chef
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            // to connect to the database//
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mazin\\Source\\Repos\\iqxr36\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True");
+            string name = txtIngredientName.Text;
+            string type = txtType.Text;
+            int quantity;
 
-            try
-            {
-                con.Open();       //to open the database//
-
-                SqlCommand cmd = new SqlCommand("INSERT INTO Ingredient (Name, Type, Quantity) VALUES (@Name, @Type, @Quantity)", con);
-                cmd.Parameters.AddWithValue("@Name", txtIngredientName.Text);
-                cmd.Parameters.AddWithValue("@Type", txtType.Text);
-                cmd.Parameters.AddWithValue("@Quantity", int.Parse(txtQuantity.Text));
-
-                int rowsAffected = cmd.ExecuteNonQuery();             //ExecuteNonQuery is method for SQL command for insert,update, and delete
-
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Successfully saved");
-                }
-                else
-                {
-                    MessageBox.Show("Failed to save No rows affected!");
-                }
+            if (int.TryParse(txtQuantity.Text, out quantity))      //if the quantity was a valid integer it will call the //
+            {                                                                      // AddIngredient method//
+                ingredientClass.AddIngredient(name, type, quantity);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                con.Close();        //close the database//
+                MessageBox.Show("Please enter a valid quantity.");
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mazin\\Source\\Repos\\iqxr36\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True");
-            con.Open();
+            string name = txtIngredientName.Text;
+            string type = txtType.Text;
+            int quantity;
 
-            SqlCommand cmd = new SqlCommand("update Ingredient set Name = @Name, Type = @Type, Quantity = @Quantity", con);
-
-            cmd.Parameters.AddWithValue("@Name", txtIngredientName.Text);
-            cmd.Parameters.AddWithValue("@Type", txtType.Text);
-            cmd.Parameters.AddWithValue("@Quantity", int.Parse(txtQuantity.Text));
-            cmd.ExecuteNonQuery();
-
-            con.Close();
-
-            MessageBox.Show("Succesfully Edited");
+            if (int.TryParse(txtQuantity.Text, out quantity))
+            {
+                ingredientClass.EditIngredient(name, type, quantity);
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid quantity.");
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mazin\\Source\\Repos\\iqxr36\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True");
-
-            con.Open();
-
-            SqlCommand cmd = new SqlCommand("Delete Ingredient where Name = @Name", con);
-
-            cmd.Parameters.AddWithValue("@Name", txtIngredientName.Text);
-            cmd.ExecuteNonQuery();
-
-            con.Close();
-            MessageBox.Show("Successfully Deleted");
+            string name = txtIngredientName.Text;
+            ingredientClass.DeleteIngredient(name);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mazin\\Source\\Repos\\iqxr36\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True");
-
-                con.Open();
-
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Ingredient", con);       //to select all records in Ingredients table//
-
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
-                DataTable dt = new DataTable();
-
-                adapter.Fill(dt);
-
-                DataGridView.DataSource = dt;
-
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            DataTable dt = ingredientClass.SearchIngredients();     //here will call the SearchIngredient method from class//
+            DataGridView.DataSource = dt;                         // the data grid view will search and display the data table //
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -150,7 +103,137 @@ namespace Resturant.chef
         {
 
         }
+ 
+    
+    
+    
+    
+    
+    }
+
+
+
+    public class IngredientInventoryClass
+    {
+        private string connect;
 
         
+        public IngredientInventoryClass()
+        {
+            connect = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mazin\\Source\\Repos\\iqxr36\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True";
+        }
+
+
+        public void AddIngredient(string name, string type, int quantity)       
+        {
+            using (SqlConnection con = new SqlConnection(connect))
+            {
+                try
+                {
+                    con.Open();         //to open the database//
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Ingredient (Name, Type, Quantity) VALUES (@Name, @Type, @Quantity)", con);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    cmd.Parameters.AddWithValue("@Type", type);
+                    cmd.Parameters.AddWithValue("@Quantity", quantity);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();               //ExecuteNonQuery is method for SQL command for insert,update, and delete
+                                                                                                    //it executes the SQL command//
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Successfully saved");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to save. No rows affected!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        public void EditIngredient(string name, string type, int quantity)
+        {
+            using (SqlConnection con = new SqlConnection(connect))
+            {
+                try
+                {
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("UPDATE Ingredient SET Type = @Type, Quantity = @Quantity WHERE Name = @Name", con);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    cmd.Parameters.AddWithValue("@Type", type);
+                    cmd.Parameters.AddWithValue("@Quantity", quantity);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Successfully Edited");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        public void DeleteIngredient(string name)
+        {
+            using (SqlConnection con = new SqlConnection(connect))
+            {
+                try
+                {
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("DELETE FROM Ingredient WHERE Name = @Name", con);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Successfully Deleted");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        public DataTable SearchIngredients()
+        {
+            DataTable dt = new DataTable();         //create datatable//
+            using (SqlConnection con = new SqlConnection(connect))
+            {
+                try
+                {
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Ingredient", con);       //to select all Ingredients in table//
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            return dt;
+        }
     }
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
