@@ -19,10 +19,13 @@ namespace Resturant.manage
 
         private void lstMenuItems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MenuItem item = new MenuItem(lstMenuItems.SelectedItem.ToString());
-            picMenuImage.Image = item.Image;
-            lblPrice.Text = item.Price.ToString();
-            lblName.Text = item.Catagory.ToString();
+            if (lstMenuItems.SelectedItem != null)
+            {
+                MenuItem item = new MenuItem(lstMenuItems.SelectedItem.ToString());
+                picMenuImage.Image = item.Image;
+                lblPrice.Text = item.Price.ToString();
+                lblName.Text = item.Catagory.ToString();
+            }
         }
 
         private void MenuFilter_Load(object sender, EventArgs e)

@@ -30,10 +30,10 @@
         {
             this.userListView = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd_user = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -41,7 +41,7 @@
             // userListView
             // 
             this.userListView.HideSelection = false;
-            this.userListView.Location = new System.Drawing.Point(42, 94);
+            this.userListView.Location = new System.Drawing.Point(66, 124);
             this.userListView.Name = "userListView";
             this.userListView.Size = new System.Drawing.Size(511, 345);
             this.userListView.TabIndex = 0;
@@ -63,6 +63,20 @@
             this.panel1.Size = new System.Drawing.Size(409, 474);
             this.panel1.TabIndex = 12;
             this.panel1.UseWaitCursor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(80, 243);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(258, 27);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Enter User Name That You Want To Delete";
+            this.label2.UseWaitCursor = true;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -99,30 +113,18 @@
             this.txtUsername.Size = new System.Drawing.Size(230, 22);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.UseWaitCursor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 243);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 27);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Enter User Name That You Want To Delete";
-            this.label2.UseWaitCursor = true;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(12, 11);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 23);
             this.button2.TabIndex = 13;
             this.button2.Text = "HOME";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.UseWaitCursor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -136,6 +138,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.userListView);
             this.Name = "DeleteUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete";
             this.Load += new System.EventHandler(this.DeleteUser_Load);
             this.panel1.ResumeLayout(false);

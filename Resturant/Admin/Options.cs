@@ -34,7 +34,28 @@ namespace Resturant.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Update update1 = new Update();
+            update1.Show();
+            this.Hide();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Edit_Users editUsers = new Edit_Users();
+            editUsers.Show();
+            this.Hide();
+        }
+
+        private void FedBack_Click(object sender, EventArgs e)
+        {
+            FeedBack1 feedBack1 = new FeedBack1();
+            feedBack1.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Feed___Back feed___Back = new Feed___Back();
+            feed___Back.Show();
         }
     }
 }

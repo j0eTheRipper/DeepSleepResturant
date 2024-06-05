@@ -26,8 +26,8 @@ namespace Resturant.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf" +
-            ";Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\DBTemp.mdf;In" +
+            "tegrated Security=True")]
         public string Database1ConnectionString {
             get {
                 return ((string)(this["Database1ConnectionString"]));
@@ -36,8 +36,8 @@ namespace Resturant.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mazin\\Source\\Repos\\i" +
-            "qxr36\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\j0eTh\\source\\repos\\R" +
+            "esturant\\Resturant\\Database1.mdf;Integrated Security=True")]
         public string YoussefConnection {
             get {
                 return ((string)(this["YoussefConnection"]));

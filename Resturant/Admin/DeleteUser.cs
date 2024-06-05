@@ -11,6 +11,8 @@ using System.Windows.Forms;
 
 namespace Resturant.Admin
 {
+
+
     public partial class DeleteUser : Form
     {
         public DeleteUser()
@@ -33,11 +35,12 @@ namespace Resturant.Admin
             userListView.Columns.Add("User Name");
             userListView.Columns.Add("Email");
             userListView.Columns.Add("Role");
+            userListView.Columns.Add("Password");
             List<User> users = new List<User>();
             users = User.GetAllUsers();
             foreach (User user in users)
             {
-                userListView.Items.Add(new ListViewItem(new string[] {user.username, user.email,user.role}));
+                userListView.Items.Add(new ListViewItem(new string[] { user.username, user.email, user.role, user.password }));
             }
             userListView.GridLines = true;
         }
@@ -78,6 +81,11 @@ namespace Resturant.Admin
             Options options = new Options();
             options.Show();
             this.Hide();
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
