@@ -182,11 +182,11 @@
     <Compile Include="manage\AddCatagory.Designer.cs">
       <DependentUpon>AddCatagory.cs</DependentUpon>
     </Compile>
-    <Compile Include="manage\AddNewItem.cs">
+    <Compile Include="manage\EditOrAddItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="manage\AddNewItem.Designer.cs">
-      <DependentUpon>AddNewItem.cs</DependentUpon>
+    <Compile Include="manage\EditOrAddItem.Designer.cs">
+      <DependentUpon>EditOrAddItem.cs</DependentUpon>
     </Compile>
     <Compile Include="manage\Catagory.cs" />
     <Compile Include="manage\frmViewReservations.cs">
@@ -279,8 +279,8 @@
     <EmbeddedResource Include="manage\AddCatagory.resx">
       <DependentUpon>AddCatagory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="manage\AddNewItem.resx">
-      <DependentUpon>AddNewItem.cs</DependentUpon>
+    <EmbeddedResource Include="manage\EditOrAddItem.resx">
+      <DependentUpon>EditOrAddItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manage\frmViewReservations.resx">
       <DependentUpon>frmViewReservations.cs</DependentUpon>

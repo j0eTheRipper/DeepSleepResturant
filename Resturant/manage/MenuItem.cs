@@ -22,14 +22,15 @@ namespace Resturant.manage
         public Image Image { get => image;}
         public decimal Price { get => price;}
         public string Catagory { get => catagory;}
+        public string Name { get => name;}
 
-        public MenuItem(string name, string catagory, decimal price, string path)
+        public MenuItem(string name, string catagory, decimal price, Image image)
         {
             this.name = name;
             this.catagory = catagory;
             this.price = price;
             this.tableName = "Item";
-            image = Image.FromFile(path);
+            this.image = image;
         }
 
         public MenuItem(string name)
@@ -37,7 +38,7 @@ namespace Resturant.manage
             this.name = name;
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
             {
-                SqlCommand cmd = new SqlCommand("SELECT catagory, price, picture FROM Item WHERE name=@name;", connection);
+                SqlCommand cmd = new SqlCommand("SELECT catagory, price, picture, itemID FROM Item WHERE name=@name;", connection);
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("name", name);
                 connection.Open();
@@ -50,6 +51,7 @@ namespace Resturant.manage
                 {
                     this.image = Image.FromStream(ms);
                 }
+                itemID = reader.GetInt32(3);
             }
         }
 
@@ -62,11 +64,7 @@ namespace Resturant.manage
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@catagory", catagory);
                 cmd.Parameters.AddWithValue("@price", price);
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    cmd.Parameters.AddWithValue("@picture", ms.ToArray());
-                }
+                cmd.Parameters.AddWithValue("@picture", ConvertImgToBytes());
                 bool alreadyExists = CheckRecordExistence();
                 if (!alreadyExists)
                 {
@@ -77,6 +75,15 @@ namespace Resturant.manage
                 {
                     return false;
                 }
+            }
+        }
+
+        private byte[] ConvertImgToBytes()
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
             }
         }
 
@@ -94,6 +101,33 @@ namespace Resturant.manage
                     result.Add(reader.GetString(0));
                 }
                 return result;
+            }
+        }
+
+        public bool Edit(MenuItem newItem)
+        {
+            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE Item set name=@name, price=@price, catagory=@catagory, picture=@picture" +
+                    " WHERE itemID=@id;", connection);
+                cmd.Parameters.AddWithValue("catagory", newItem.catagory);
+                cmd.Parameters.AddWithValue("name", newItem.name);
+                cmd.Parameters.AddWithValue("price", newItem.Price);
+                cmd.Parameters.AddWithValue("picture", newItem.ConvertImgToBytes());
+                cmd.Parameters.AddWithValue("id", this.itemID);
+                connection.Open();
+                return cmd.ExecuteNonQuery() == 1;
+            }
+        }
+
+        public bool Delete()
+        {
+            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
+            {
+                SqlCommand cmd = new SqlCommand("DELETE FROM Item WHERE itemID=@id;", connection);
+                cmd.Parameters.AddWithValue("id", itemID);
+                connection.Open();
+                return cmd.ExecuteNonQuery() == 1;
             }
         }
     }
