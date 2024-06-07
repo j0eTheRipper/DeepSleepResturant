@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(341, 117);
+            this.label1.Location = new System.Drawing.Point(197, 130);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 25);
@@ -48,7 +48,7 @@
             // lnkMenu
             // 
             this.lnkMenu.AutoSize = true;
-            this.lnkMenu.Location = new System.Drawing.Point(341, 326);
+            this.lnkMenu.Location = new System.Drawing.Point(197, 339);
             this.lnkMenu.Name = "lnkMenu";
             this.lnkMenu.Size = new System.Drawing.Size(150, 25);
             this.lnkMenu.TabIndex = 3;
@@ -59,7 +59,7 @@
             // lnkReservationRequest
             // 
             this.lnkReservationRequest.AutoSize = true;
-            this.lnkReservationRequest.Location = new System.Drawing.Point(341, 227);
+            this.lnkReservationRequest.Location = new System.Drawing.Point(197, 240);
             this.lnkReservationRequest.Name = "lnkReservationRequest";
             this.lnkReservationRequest.Size = new System.Drawing.Size(292, 25);
             this.lnkReservationRequest.TabIndex = 2;
@@ -70,7 +70,7 @@
             // lnkReservationReport
             // 
             this.lnkReservationReport.AutoSize = true;
-            this.lnkReservationReport.Location = new System.Drawing.Point(341, 174);
+            this.lnkReservationReport.Location = new System.Drawing.Point(197, 187);
             this.lnkReservationReport.Name = "lnkReservationReport";
             this.lnkReservationReport.Size = new System.Drawing.Size(249, 25);
             this.lnkReservationReport.TabIndex = 1;
@@ -81,7 +81,7 @@
             // lnkReserveForCustomer
             // 
             this.lnkReserveForCustomer.AutoSize = true;
-            this.lnkReserveForCustomer.Location = new System.Drawing.Point(341, 280);
+            this.lnkReserveForCustomer.Location = new System.Drawing.Point(197, 293);
             this.lnkReserveForCustomer.Name = "lnkReserveForCustomer";
             this.lnkReserveForCustomer.Size = new System.Drawing.Size(217, 25);
             this.lnkReserveForCustomer.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 468);
+            this.ClientSize = new System.Drawing.Size(683, 468);
             this.Controls.Add(this.lnkReserveForCustomer);
             this.Controls.Add(this.lnkReservationReport);
             this.Controls.Add(this.lnkReservationRequest);

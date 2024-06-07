@@ -25,7 +25,8 @@ namespace Resturant
 
         private void lnkReservation_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+            ReservationRequest request = new ReservationRequest();
+            request.ShowDialog();
         }
 
         private void lnkReserveForCustomer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

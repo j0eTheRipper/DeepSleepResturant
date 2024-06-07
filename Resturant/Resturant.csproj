@@ -221,6 +221,12 @@
     <Compile Include="manage\ReservationDetails.Designer.cs">
       <DependentUpon>ReservationDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="manage\ReservationRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage\ReservationRequest.Designer.cs">
+      <DependentUpon>ReservationRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="manage\ViewAndEditItems.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manage\ReservationDetails.resx">
       <DependentUpon>ReservationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage\ReservationRequest.resx">
+      <DependentUpon>ReservationRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manage\ViewAndEditItems.resx">
       <DependentUpon>ViewAndEditItems.cs</DependentUpon>

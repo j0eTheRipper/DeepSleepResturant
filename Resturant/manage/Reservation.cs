@@ -41,7 +41,7 @@ namespace Resturant
                 if (reader.Read())
                 {
                     table = new Table(reader.GetInt32(0));
-                    date = reader.GetDateTime(1).ToString();
+                    date = reader.GetDateTime(1).Date.ToString("yyyy-MM-dd");
                     inTime = reader.GetTimeSpan(2).ToString();
                     outTime = reader.GetTimeSpan(3).ToString();
                     customerID = reader.GetInt32(4);
@@ -138,6 +138,25 @@ namespace Resturant
                 connection.Open();
                 int x = cmd.ExecuteNonQuery();
                 return x == 2;
+            }
+        }
+
+        public static List<Reservation> GetNonApproved()
+        {
+            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT reservations.reservationID FROM reservations " +
+                    "JOIN Customer on Customer.CustomerID = reservations.CustomerID " +
+                    "JOIN Tables on Tables.tableID = reservations.tableID" +
+                    " WHERE customer.Reservation IS NULL AND reservationDate > GETDATE();", connection);
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<Reservation> list = new List<Reservation>();
+                while (reader.Read())
+                {
+                    list.Add(new Reservation(reader.GetInt32(0)));
+                }
+                return list;
             }
         }
     }
