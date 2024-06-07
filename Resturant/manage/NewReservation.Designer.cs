@@ -56,7 +56,7 @@
             this.btnMakeReservation.BackColor = System.Drawing.Color.DarkGray;
             this.btnMakeReservation.ForeColor = System.Drawing.Color.Black;
             this.btnMakeReservation.Location = new System.Drawing.Point(116, 293);
-            this.btnMakeReservation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMakeReservation.Margin = new System.Windows.Forms.Padding(2);
             this.btnMakeReservation.Name = "btnMakeReservation";
             this.btnMakeReservation.Size = new System.Drawing.Size(149, 22);
             this.btnMakeReservation.TabIndex = 8;

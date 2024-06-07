@@ -56,18 +56,20 @@ namespace Resturant.manage
 
         private void txtHour_TextChanged_1(object sender, EventArgs e)
         {
+            TextBox txtHour = (TextBox)sender;
             int input;
-            int.TryParse(txtHourFrom.Text, out input);
-            if ((input == 0 || input > 12) && txtHourFrom.ForeColor != Color.Gray)
-                txtHourFrom.Text = "";
+            int.TryParse(txtHour.Text, out input);
+            if ((input == 0 || input > 12) && txtHour.ForeColor != Color.Gray)
+                txtHour.Text = "";
         }
 
         private void txtMinute_TextChanged(object sender, EventArgs e)
         {
+            TextBox txtMinute = (TextBox)sender;
             int input;
-            int.TryParse(txtMinuteFrom.Text, out input);
-            if ((input == 0 || input > 59) && txtMinuteFrom.ForeColor != Color.Gray)
-                txtMinuteFrom.Text = "";
+            int.TryParse(txtMinute.Text, out input);
+            if ((input == 0 || input > 59) && txtMinute.ForeColor != Color.Gray && txtMinute.Text != "0" && txtMinute.Text != "00")
+                txtMinute.Text = "";
         }
 
         private string Get24HourFormat(TextBox txtHour, TextBox txtMinute, Button btnAMPM)
@@ -82,6 +84,51 @@ namespace Resturant.manage
                 return $"{hour}:{txtMinute.Text}";
             }
             return null;
+        }
+
+        public void loadReservationData(int ReservationID)
+        {
+            Reservation reservation = new Reservation(ReservationID);
+            if (reservation.ID == 0)
+            {
+                MessageBox.Show("please enter a valid reservationID from the table below.");
+                return;
+            } 
+            txtNumberOfPeople.Text = reservation.NumberOfPeople.ToString();
+            dntDate.Value = DateTime.Parse(reservation.Date);
+            AMPMFormat(reservation.InTime, btnAMPMFrom, txtHourFrom, txtMinuteFrom);
+            AMPMFormat(reservation.OutTime, btnAMPMTo, txtHourTo, txtMinuteTo);
+        }
+
+        private void AMPMFormat(string time, Button btnAMPM, TextBox txtHour, TextBox txtMinute)
+        {
+            string[] hourMinute = time.Split(':');
+            int.TryParse(hourMinute[0], out int hour);
+            txtHour.ForeColor = Color.Black;
+            txtMinute.ForeColor = Color.Black;
+            if (hour == 0)
+                txtHour.Text = "12";
+            else if (hour >= 12)
+            {
+                if (btnAMPM.Text == "AM")
+                    btnAMPM_Click(btnAMPM, new EventArgs());
+                txtHour.Text = hour > 12 ? (hour - 12).ToString() : "12";
+            } else
+                txtHour.Text = hourMinute[0];
+            txtMinute.Text = hourMinute[1];
+        }
+
+        public void ClearData()
+        {
+            txtNumberOfPeople.Text = "";
+            txtHourFrom.Text = "";
+            txtHourTo.Text = "";
+            txtMinuteTo.Text = "";
+            txtMinuteFrom.Text = "";
+            txtBoxLeave(txtMinuteFrom, new EventArgs());
+            txtBoxLeave(txtHourFrom, new EventArgs());
+            txtBoxLeave(txtHourTo, new EventArgs());
+            txtBoxLeave(txtMinuteTo, new EventArgs());
         }
 
         public string Date

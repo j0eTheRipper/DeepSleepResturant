@@ -15,6 +15,12 @@ namespace Resturant
         private string date;
         private string inTime, outTime;
 
+        public int NumberOfPeople { get => numberOfPeople; }
+        public string Date { get => date; }
+        public string InTime { get => inTime; }
+        public string OutTime { get => outTime; }
+        public int CustomerID { get => customerID; }
+        public int ID { get => id; }
         public Reservation(int customerID, int numberOfPeople, string date, string time, string outTime)
         {
             this.customerID = customerID;
@@ -22,6 +28,27 @@ namespace Resturant
             this.date = date;
             this.inTime = time;
             this.outTime = outTime;
+        }
+
+        public Reservation(int reservationID)
+        {
+            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT tableID, reservationDate, reservationStartTime, reservationEndTime, customerID from reservations WHERE reservationID = @id;", connection);
+                cmd.Parameters.AddWithValue("id", reservationID);
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    table = new Table(reader.GetInt32(0));
+                    date = reader.GetDateTime(1).ToString();
+                    inTime = reader.GetTimeSpan(2).ToString();
+                    outTime = reader.GetTimeSpan(3).ToString();
+                    customerID = reader.GetInt32(4);
+                    numberOfPeople = table.NumberOfSeats;
+                    id = reservationID;
+                }
+            }
         }
 
         public Table SearchForTable()
@@ -76,6 +103,41 @@ namespace Resturant
                 if (isSuccess)
                     return true;
                 else return false;
+            }
+        }
+
+        public bool ChangeReservation(Reservation newReservation)
+        {
+            bool deletionSuccess = DeleteReservation();
+            if (!deletionSuccess)
+            {
+                return false;
+            }
+            Table table = newReservation.SearchForTable();
+            if (table != null)
+            {
+                newReservation.UpdateReservationsTable(table);
+                newReservation.UpdateCustomersTable();
+                return true;
+            } else
+            {
+                UpdateReservationsTable(table);
+                UpdateCustomersTable();
+                return false;
+            }
+        }
+
+        public bool DeleteReservation()
+        {
+            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE Customer SET Reservation = Null where customerID = @customerID;" +
+                    "DELETE FROM reservations WHERE reservationID = @id;", connection);
+                cmd.Parameters.AddWithValue("id", id);
+                cmd.Parameters.AddWithValue("customerID", customerID);
+                connection.Open();
+                int x = cmd.ExecuteNonQuery();
+                return x == 2;
             }
         }
     }
