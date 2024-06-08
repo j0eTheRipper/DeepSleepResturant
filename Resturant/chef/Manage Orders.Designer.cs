@@ -121,6 +121,7 @@
             this.DataOfOrders.RowTemplate.Height = 24;
             this.DataOfOrders.Size = new System.Drawing.Size(533, 427);
             this.DataOfOrders.TabIndex = 14;
+            this.DataOfOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataOfOrders_CellContentClick);
             // 
             // Manage_Orders
             // 
