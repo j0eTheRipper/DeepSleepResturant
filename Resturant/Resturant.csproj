@@ -352,13 +352,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <Content Include="DBTemp.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DBTemp_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DBTemp.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\Premium Vector _ Handdrawn chef logo mascot delicious.jpeg" />
     <None Include="Resources\Capture.PNG" />
   </ItemGroup>

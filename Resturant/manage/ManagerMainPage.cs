@@ -1,4 +1,5 @@
-﻿using Resturant.manage;
+﻿using Resturant.Admin;
+using Resturant.manage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,12 @@ namespace Resturant
         {
             ViewAndEditItems frmView = new ViewAndEditItems();
             frmView.ShowDialog();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Update updateProfile = new Update();
+            updateProfile.ShowDialog();
         }
     }
 }

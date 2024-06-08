@@ -33,6 +33,7 @@
             this.lnkReservationRequest = new System.Windows.Forms.LinkLabel();
             this.lnkReservationReport = new System.Windows.Forms.LinkLabel();
             this.lnkReserveForCustomer = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -89,11 +90,23 @@
             this.lnkReserveForCustomer.Text = "Reserve for customer";
             this.lnkReserveForCustomer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkReserveForCustomer_LinkClicked);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(197, 383);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(148, 25);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Update Profile";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // ManagerMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 468);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.lnkReserveForCustomer);
             this.Controls.Add(this.lnkReservationReport);
             this.Controls.Add(this.lnkReservationRequest);
@@ -116,5 +129,6 @@
         private System.Windows.Forms.LinkLabel lnkReservationRequest;
         private System.Windows.Forms.LinkLabel lnkReservationReport;
         private System.Windows.Forms.LinkLabel lnkReserveForCustomer;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
