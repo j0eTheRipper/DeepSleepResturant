@@ -13,78 +13,16 @@ namespace Resturant.Customer
     {
 
 
-        // Method to add feedback
-        public bool AddFeedback(int customerId, string feedback)
+        public static bool AddFeedBack(string Feddback, string Service, string Satisfactioon, int id)
         {
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
-
             {
-                string query = "INSERT INTO dbo.Feedback (CustomerID, Feedback) VALUES (@CustomerId, @Feedback)";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@CustomerId", customerId);
-                command.Parameters.AddWithValue("@Feedback", feedback);
-
-                try
-                {
-                    connection.Open();
-                    int result = command.ExecuteNonQuery();
-                    return result > 0;
-                }
-                catch (Exception ex)
-                {
-                    // Log or handle the exception
-                    Console.WriteLine("An error occurred: " + ex.Message);
-                    return false;
-                }
+                connection.Open();
+                SqlCommand addeddfeed_back = new SqlCommand($"INSERT INTO Feedback(Feedback, Service, Satisfaction, CustomerID) VALUES ('{Feddback}',  '{Service}', '{Satisfactioon}', {id})", connection);
+                int isfeedback_added = addeddfeed_back.ExecuteNonQuery();
+                connection.Close();
+                return isfeedback_added == 1;
             }
-        }
-
-        // Method to get feedback
-        public List<Feedback> GetFeedback()
-        {
-            List<Feedback> feedbackList = new List<Feedback>();
-
-            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
-            {
-                string query = "SELECT FeedbackID, CustomerID, Feedback FROM dbo.Feedback";
-
-                SqlCommand command = new SqlCommand(query, connection);
-
-                try
-                {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        Feedback feedback = new Feedback
-                        {
-                            FeedbackID = reader.GetInt32(0),
-                            CustomerID = reader.GetInt32(1),
-                            FeedbackText = reader.GetString(2)
-                        };
-
-                        feedbackList.Add(feedback);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    // Log or handle the exception
-                    Console.WriteLine("An error occurred: " + ex.Message);
-                }
-            }
-
-            return feedbackList;
-        }
-    }
-
-    // Class to represent feedback data
-    public class Feedback
-    {
-        public int FeedbackID { get; set; }
-        public int CustomerID { get; set; }
-        public string FeedbackText { get; set; }
+        }   
     }
 }
-

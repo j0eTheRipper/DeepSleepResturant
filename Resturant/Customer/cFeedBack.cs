@@ -2,91 +2,82 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Resturant.Customer
 {
-    public partial class cFeedBack : Form
+    public partial class cFeedback : Form
     {
-        private CustomerFeedback customerFeedback;
-
-        public cFeedBack()
+        int customerID;
+        public cFeedback(string username)
         {
-        
+            InitializeComponent();
+            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
+            {
+                SqlCommand cmd = new SqlCommand($"SELECT CustomerID FROM Customer WHERE username='{username}';", connection);
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                customerID = reader.GetInt32(0);
+            }
         }
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
 
+        private string GetSelectedSatisfaction()
+        {
+            if (rdoVerySatisfied.Checked)
+                return "VerySatisfied";
+            else if (rdoSatisfied.Checked)
+                return "Satisfied";
+            else if (rdoNeutral.Checked)
+                return "Neutral";
+            else if (rdoUnsatisfied.Checked)
+                return "Unsatisfied";
+            else if (rdoVeryUnsatisfied.Checked)
+                return "VeryUnsatisfied";
+            return string.Empty;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-        }
+            string feedback = txtFeedBack.Text;
+            string service = txtService.Text;
+            string satisfaction =  GetSelectedSatisfaction();
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cFeedBack_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSubmit1_Click(object sender, EventArgs e)
-        {
-            int customerId = int.Parse(txtCustomerID.Text);
-            string feedback = textFeedback.Text;
-
-            bool success = customerFeedback.AddFeedback(customerId, feedback);
-            if (success)
+            bool isAdded = CustomerFeedback.AddFeedBack(feedback, service, satisfaction, this.customerID);
+            
+            if(isAdded)
             {
-                MessageBox.Show("Feedback submitted successfully!");
+                MessageBox.Show("Feedback added successfully");
             }
             else
             {
-                MessageBox.Show("Failed to submit feedback.");
+                MessageBox.Show("Failed to add feedback. Please try again");
             }
         }
 
-        private void feedtext(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-           
-                List<Feedback> feedbackList = customerFeedback.GetFeedback();
+            txtFeedBack.Text = string.Empty;
+            txtService.Text = string.Empty;
+            rdoVerySatisfied.Checked = false;
+            rdoSatisfied.Checked = false;
+            rdoNeutral.Checked = false;
+            rdoUnsatisfied.Checked = false;
+            rdoVeryUnsatisfied.Checked = false;
 
-                foreach (var feedback in feedbackList)
-                {
-                    // Display feedback in your form (e.g., add to a ListView or DataGridView)
-                    Console.WriteLine($"FeedbackID: {feedback.FeedbackID}, CustomerID: {feedback.CustomerID}, Feedback: {feedback.FeedbackText}");
-                }
-            
         }
 
-        private void CustomerFeedback_Click(object sender, EventArgs e)
+        private void cFeedback_Load(object sender, EventArgs e)
         {
 
         }

@@ -12,7 +12,7 @@ namespace Resturant.Customer
 {
     public partial class cViewOrder : Form
     {
-        public cViewOrder()
+        public cViewOrder(string username)
         {
             InitializeComponent();
         }

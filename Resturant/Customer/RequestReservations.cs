@@ -14,16 +14,16 @@ namespace Resturant
         public RequestReservation(int customerID, int numberOfPeople, string date, string time, string outTime) : base(customerID, numberOfPeople, date, time, outTime)
         { }
 
-        public Table MakeReservationTable()
+        public bool MakeReservationTable()
         {
             Table newTable = SearchForTable();
 
             if (newTable != null)
             {
                 UpdateReservationsTable(newTable);
+                return true;
             }
-
-            return newTable;
+            else return false;
         }
     }
 }

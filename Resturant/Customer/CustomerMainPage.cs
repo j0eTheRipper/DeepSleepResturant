@@ -13,40 +13,46 @@ namespace Resturant
 {
     public partial class CustomerMainPage : Form
     {
-        public CustomerMainPage()
+        string username;
+        public CustomerMainPage(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cOrderFood CF2 = new cOrderFood();
-            CF2.Show();
+
         }
 
         private void Menu_Click(object sender, EventArgs e)
         {
-            cMenu CM2 = new cMenu();
+            cMenu CM2 = new cMenu(username);
             CM2.Show();
 
         }
 
         private void Reservation_Click(object sender, EventArgs e)
         {
-            cReservation CR2 = new cReservation();
+            cReservation CR2 = new cReservation(username);
             CR2.Show();
         }
 
         private void S_feedback_Click(object sender, EventArgs e)
         {
-            cFeedBack CF2 = new cFeedBack();
+            cFeedback CF2 = new cFeedback(username);
             CF2.Show();
+
+        }
+
+        private void Update_profile_Click(object sender, EventArgs e)
+        {
 
         }
 
         private void View_order_Click(object sender, EventArgs e)
         {
-            cViewOrder CV2 = new cViewOrder ();
+            cViewOrder CV2 = new cViewOrder(username);
             CV2.Show();
         }
 
@@ -80,10 +86,6 @@ namespace Resturant
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            //cOrderReservation COR2 = new cOrderReservation();
-            //COR2.Show();
-        }
+        
     }
 }

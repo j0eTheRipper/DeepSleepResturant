@@ -48,9 +48,19 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -135,11 +145,11 @@
     <Compile Include="chef\View Orders.Designer.cs">
       <DependentUpon>View Orders.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\cFeedBack.cs">
+    <Compile Include="Customer\cFeedback.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\cFeedBack.Designer.cs">
-      <DependentUpon>cFeedBack.cs</DependentUpon>
+    <Compile Include="Customer\cFeedback.Designer.cs">
+      <DependentUpon>cFeedback.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer\ClOrder.cs" />
     <Compile Include="Customer\cMenu.cs">
@@ -147,12 +157,6 @@
     </Compile>
     <Compile Include="Customer\cMenu.Designer.cs">
       <DependentUpon>cMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\cOrderFood.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer\cOrderFood.Designer.cs">
-      <DependentUpon>cOrderFood.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer\cReservation.cs">
       <SubType>Form</SubType>
@@ -172,6 +176,12 @@
     </Compile>
     <Compile Include="Customer\cViewOrder.Designer.cs">
       <DependentUpon>cViewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CWidgetMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CWidgetMenu.Designer.cs">
+      <DependentUpon>CWidgetMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer\RequestReservations.cs" />
     <Compile Include="LoginPage.cs">
@@ -204,6 +214,12 @@
     </Compile>
     <Compile Include="manage\ManagerMainPage.Designer.cs">
       <DependentUpon>ManagerMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage\MenuFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manage\MenuFilter.Designer.cs">
+      <DependentUpon>MenuFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="manage\MenuItem.cs" />
     <Compile Include="manage\NewReservation.cs">
@@ -269,20 +285,20 @@
     <EmbeddedResource Include="chef\View Orders.resx">
       <DependentUpon>View Orders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\cFeedBack.resx">
-      <DependentUpon>cFeedBack.cs</DependentUpon>
+    <EmbeddedResource Include="Customer\cFeedback.resx">
+      <DependentUpon>cFeedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\cMenu.resx">
       <DependentUpon>cMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Customer\cOrderFood.resx">
-      <DependentUpon>cOrderFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\cReservation.resx">
       <DependentUpon>cReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\CustomerMainPage.resx">
       <DependentUpon>CustomerMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CWidgetMenu.resx">
+      <DependentUpon>CWidgetMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -298,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manage\ManagerMainPage.resx">
       <DependentUpon>ManagerMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage\MenuFilter.resx">
+      <DependentUpon>MenuFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manage\NewReservation.resx">
       <DependentUpon>NewReservation.cs</DependentUpon>
@@ -358,5 +377,8 @@
     <None Include="Resources\Capture.PNG" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
