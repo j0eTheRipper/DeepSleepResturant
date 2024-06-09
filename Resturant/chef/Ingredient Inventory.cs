@@ -120,7 +120,7 @@ namespace Resturant.chef
         
         public IngredientInventoryClass()
         {
-            connect = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mazin\\Source\\Repos\\iqxr36\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True";
+            connect = Properties.Settings.Default.YoussefConnection;
         }
 
 
