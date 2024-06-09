@@ -34,7 +34,8 @@ namespace Resturant
         {
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
             {
-                SqlCommand cmd = new SqlCommand("SELECT tableID, reservationDate, reservationStartTime, reservationEndTime, customerID from reservations WHERE reservationID = @id;", connection);
+                SqlCommand cmd = new SqlCommand("SELECT tableID, reservationDate, reservationStartTime," +
+                    " reservationEndTime, customerID from reservations WHERE reservationID = @id;", connection);
                 cmd.Parameters.AddWithValue("id", reservationID);
                 connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();

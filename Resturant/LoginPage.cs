@@ -115,5 +115,17 @@ namespace Resturant
         {
             txtPassword.PasswordChar = chbxShowPassword.Checked ? '\0' : '*';
         }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("please enter your username and password");
+                return;
+            }
+            bool x = User.RegisterUser(txtUsername.Text, txtPassword.Text, $"{txtUsername.Text}@deepsleep.com", "customer");
+            if (x) MessageBox.Show("success");
+            else MessageBox.Show("Please try again with another username");
+        }
     }
 }

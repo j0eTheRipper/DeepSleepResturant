@@ -31,14 +31,16 @@
             this.dgvReservations = new System.Windows.Forms.DataGridView();
             this.grpReservationDetails = new System.Windows.Forms.GroupBox();
             this.chbxIncludeDate = new System.Windows.Forms.CheckBox();
+            this.reservationDetailsFilter = new Resturant.manage.ReservationDetails();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.txtReservationID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLoadData = new System.Windows.Forms.Button();
             this.btnUpdateReservation = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.reservationDetailsFilter = new Resturant.manage.ReservationDetails();
             this.btnDeleteReservation = new System.Windows.Forms.Button();
+            this.btnAddReservation = new System.Windows.Forms.Button();
+            this.btnApproveReservation = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).BeginInit();
             this.grpReservationDetails.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +50,7 @@
             this.dgvReservations.AllowUserToAddRows = false;
             this.dgvReservations.AllowUserToDeleteRows = false;
             this.dgvReservations.AllowUserToOrderColumns = true;
+            this.dgvReservations.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.dgvReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservations.Location = new System.Drawing.Point(12, 217);
             this.dgvReservations.MultiSelect = false;
@@ -76,6 +79,13 @@
             this.chbxIncludeDate.TabIndex = 1;
             this.chbxIncludeDate.Text = "Include Date";
             this.chbxIncludeDate.UseVisualStyleBackColor = true;
+            // 
+            // reservationDetailsFilter
+            // 
+            this.reservationDetailsFilter.Location = new System.Drawing.Point(6, 13);
+            this.reservationDetailsFilter.Name = "reservationDetailsFilter";
+            this.reservationDetailsFilter.Size = new System.Drawing.Size(372, 147);
+            this.reservationDetailsFilter.TabIndex = 0;
             // 
             // btnSubmit
             // 
@@ -115,12 +125,13 @@
             // 
             // btnUpdateReservation
             // 
+            this.btnUpdateReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnUpdateReservation.Location = new System.Drawing.Point(401, 61);
             this.btnUpdateReservation.Name = "btnUpdateReservation";
             this.btnUpdateReservation.Size = new System.Drawing.Size(129, 23);
             this.btnUpdateReservation.TabIndex = 18;
             this.btnUpdateReservation.Text = "Update Reservation";
-            this.btnUpdateReservation.UseVisualStyleBackColor = true;
+            this.btnUpdateReservation.UseVisualStyleBackColor = false;
             this.btnUpdateReservation.Click += new System.EventHandler(this.btnUpdateReservation_Click);
             // 
             // btnClear
@@ -133,28 +144,45 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // reservationDetailsFilter
-            // 
-            this.reservationDetailsFilter.Location = new System.Drawing.Point(6, 13);
-            this.reservationDetailsFilter.Name = "reservationDetailsFilter";
-            this.reservationDetailsFilter.Size = new System.Drawing.Size(372, 147);
-            this.reservationDetailsFilter.TabIndex = 0;
-            // 
             // btnDeleteReservation
             // 
+            this.btnDeleteReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDeleteReservation.Location = new System.Drawing.Point(555, 61);
             this.btnDeleteReservation.Name = "btnDeleteReservation";
             this.btnDeleteReservation.Size = new System.Drawing.Size(133, 23);
             this.btnDeleteReservation.TabIndex = 20;
             this.btnDeleteReservation.Text = "Delete Reservation";
-            this.btnDeleteReservation.UseVisualStyleBackColor = true;
+            this.btnDeleteReservation.UseVisualStyleBackColor = false;
             this.btnDeleteReservation.Click += new System.EventHandler(this.btnDeleteReservation_Click);
+            // 
+            // btnAddReservation
+            // 
+            this.btnAddReservation.Location = new System.Drawing.Point(401, 155);
+            this.btnAddReservation.Name = "btnAddReservation";
+            this.btnAddReservation.Size = new System.Drawing.Size(278, 23);
+            this.btnAddReservation.TabIndex = 21;
+            this.btnAddReservation.Text = "Reserve For Customer";
+            this.btnAddReservation.UseVisualStyleBackColor = true;
+            this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
+            // 
+            // btnApproveReservation
+            // 
+            this.btnApproveReservation.Location = new System.Drawing.Point(401, 187);
+            this.btnApproveReservation.Name = "btnApproveReservation";
+            this.btnApproveReservation.Size = new System.Drawing.Size(278, 23);
+            this.btnApproveReservation.TabIndex = 22;
+            this.btnApproveReservation.Text = "Approve reservations";
+            this.btnApproveReservation.UseVisualStyleBackColor = true;
+            this.btnApproveReservation.Click += new System.EventHandler(this.btnApproveReservation_Click);
             // 
             // frmViewReservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(691, 443);
+            this.Controls.Add(this.btnApproveReservation);
+            this.Controls.Add(this.btnAddReservation);
             this.Controls.Add(this.btnDeleteReservation);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdateReservation);
@@ -166,6 +194,7 @@
             this.Controls.Add(this.dgvReservations);
             this.Name = "frmViewReservations";
             this.Text = "frmViewReservations";
+            this.Load += new System.EventHandler(this.frmViewReservations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).EndInit();
             this.grpReservationDetails.ResumeLayout(false);
             this.grpReservationDetails.PerformLayout();
@@ -187,5 +216,7 @@
         private System.Windows.Forms.Button btnUpdateReservation;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDeleteReservation;
+        private System.Windows.Forms.Button btnAddReservation;
+        private System.Windows.Forms.Button btnApproveReservation;
     }
 }

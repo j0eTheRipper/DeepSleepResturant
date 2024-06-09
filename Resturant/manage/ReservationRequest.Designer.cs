@@ -35,6 +35,7 @@
             // 
             // lstReservationRequests
             // 
+            this.lstReservationRequests.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lstReservationRequests.FormattingEnabled = true;
             this.lstReservationRequests.Location = new System.Drawing.Point(9, 12);
             this.lstReservationRequests.Name = "lstReservationRequests";
@@ -43,28 +44,31 @@
             // 
             // btnApprove
             // 
+            this.btnApprove.BackColor = System.Drawing.Color.Lime;
             this.btnApprove.Location = new System.Drawing.Point(13, 179);
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.Size = new System.Drawing.Size(171, 23);
             this.btnApprove.TabIndex = 1;
             this.btnApprove.Text = "Approve Reservation";
-            this.btnApprove.UseVisualStyleBackColor = true;
+            this.btnApprove.UseVisualStyleBackColor = false;
             this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
             // 
             // btnCancell
             // 
+            this.btnCancell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnCancell.Location = new System.Drawing.Point(237, 178);
             this.btnCancell.Name = "btnCancell";
             this.btnCancell.Size = new System.Drawing.Size(171, 23);
             this.btnCancell.TabIndex = 2;
             this.btnCancell.Text = "Cancel Reservation";
-            this.btnCancell.UseVisualStyleBackColor = true;
+            this.btnCancell.UseVisualStyleBackColor = false;
             this.btnCancell.Click += new System.EventHandler(this.btnCancell_Click);
             // 
             // ReservationRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(417, 214);
             this.Controls.Add(this.btnCancell);
             this.Controls.Add(this.btnApprove);

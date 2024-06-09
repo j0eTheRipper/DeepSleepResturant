@@ -53,12 +53,12 @@
             // 
             // btnMakeReservation
             // 
-            this.btnMakeReservation.BackColor = System.Drawing.Color.DarkGray;
+            this.btnMakeReservation.BackColor = System.Drawing.Color.Transparent;
             this.btnMakeReservation.ForeColor = System.Drawing.Color.Black;
-            this.btnMakeReservation.Location = new System.Drawing.Point(116, 293);
+            this.btnMakeReservation.Location = new System.Drawing.Point(71, 290);
             this.btnMakeReservation.Margin = new System.Windows.Forms.Padding(2);
             this.btnMakeReservation.Name = "btnMakeReservation";
-            this.btnMakeReservation.Size = new System.Drawing.Size(149, 22);
+            this.btnMakeReservation.Size = new System.Drawing.Size(226, 25);
             this.btnMakeReservation.TabIndex = 8;
             this.btnMakeReservation.Text = "Make Reservation";
             this.btnMakeReservation.UseVisualStyleBackColor = false;
@@ -75,6 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(385, 326);
             this.Controls.Add(this.reservationDetails1);
             this.Controls.Add(this.btnMakeReservation);

@@ -10,8 +10,6 @@ namespace Resturant.manage
 {
     internal class Catagory: RecordManager
     {
-        private List<string> items;
-
         public Catagory(string name)
         {
             this.name = name;

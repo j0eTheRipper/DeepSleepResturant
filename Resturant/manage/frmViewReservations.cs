@@ -115,5 +115,24 @@ namespace Resturant.manage
             }
             else MessageBox.Show("please enter a reservationID");
         }
+
+        private void btnAddReservation_Click(object sender, EventArgs e)
+        {
+            NewReservation request = new NewReservation();
+            request.ShowDialog();
+            btnClear_Click(sender, e);
+        }
+
+        private void btnApproveReservation_Click(object sender, EventArgs e)
+        {
+            ReservationRequest request = new ReservationRequest();
+            request.ShowDialog();
+            btnClear_Click(sender, e);
+        }
+
+        private void frmViewReservations_Load(object sender, EventArgs e)
+        {
+            btnClear_Click(sender, e);
+        }
     }
 }

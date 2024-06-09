@@ -36,12 +36,13 @@
             // 
             // btnAddItem
             // 
+            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAddItem.Location = new System.Drawing.Point(22, 268);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(144, 23);
             this.btnAddItem.TabIndex = 2;
             this.btnAddItem.Text = "Add Item";
-            this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.UseVisualStyleBackColor = false;
             this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // btnEditItem
@@ -56,12 +57,13 @@
             // 
             // btnDeleteItem
             // 
+            this.btnDeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDeleteItem.Location = new System.Drawing.Point(327, 268);
             this.btnDeleteItem.Name = "btnDeleteItem";
             this.btnDeleteItem.Size = new System.Drawing.Size(144, 23);
             this.btnDeleteItem.TabIndex = 5;
             this.btnDeleteItem.Text = "Delete Item";
-            this.btnDeleteItem.UseVisualStyleBackColor = true;
+            this.btnDeleteItem.UseVisualStyleBackColor = false;
             this.btnDeleteItem.Click += new System.EventHandler(this.EditOrDelete);
             // 
             // menuFilter1
@@ -75,6 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(483, 301);
             this.Controls.Add(this.btnDeleteItem);
             this.Controls.Add(this.btnEditItem);
