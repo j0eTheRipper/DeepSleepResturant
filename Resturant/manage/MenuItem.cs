@@ -24,6 +24,8 @@ namespace Resturant.manage
         public string Catagory { get => catagory;}
         public string Name { get => name;}
 
+        public int ItemID { get => itemID;}
+
         public MenuItem(string name, string catagory, decimal price, Image image)
         {
             this.name = name;

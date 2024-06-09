@@ -1,4 +1,5 @@
-﻿using Resturant.Customer;
+﻿using Resturant.Admin;
+using Resturant.Customer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,41 +14,47 @@ namespace Resturant
 {
     public partial class CustomerMainPage : Form
     {
-        public CustomerMainPage()
+        string username;
+        public CustomerMainPage(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cOrderFood CF2 = new cOrderFood();
-            CF2.Show();
+
         }
 
         private void Menu_Click(object sender, EventArgs e)
         {
-            cMenu CM2 = new cMenu();
+            cMenu CM2 = new cMenu(username);
             CM2.Show();
 
         }
 
         private void Reservation_Click(object sender, EventArgs e)
         {
-            cReservation CR2 = new cReservation();
+            cReservation CR2 = new cReservation(username);
             CR2.Show();
         }
 
         private void S_feedback_Click(object sender, EventArgs e)
         {
-            cFeedBack CF2 = new cFeedBack();
+            cFeedback CF2 = new cFeedback(username);
             CF2.Show();
 
         }
 
+        private void Update_profile_Click(object sender, EventArgs e)
+        {
+            Update UP2 = new Update();
+            UP2.Show();
+        }
+
         private void View_order_Click(object sender, EventArgs e)
         {
-            cViewOrder_Reservation CV2 = new cViewOrder_Reservation ();
-            CV2.Show();
+           
         }
 
         private void CustomerMainPage_Load(object sender, EventArgs e)
@@ -79,5 +86,7 @@ namespace Resturant
         {
 
         }
+
+        
     }
 }
