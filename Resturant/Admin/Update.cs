@@ -21,6 +21,7 @@ namespace Resturant.Admin
         {
             string oldUserName = txtOld.Text;
             string newUserName = txtNew23.Text;
+            string currentUserRole = "admin";
 
             if (string.IsNullOrEmpty(oldUserName) || string.IsNullOrEmpty(newUserName))
             {
@@ -114,7 +115,8 @@ namespace Resturant.Admin
                 return;
             }
 
-            bool isUpdated = User.UpdateUserName(oldUserName, newUserName);
+
+             bool isUpdated = User.UpdateUserName(oldUserName, newUserName);
 
             if (isUpdated)
             {
@@ -188,6 +190,16 @@ namespace Resturant.Admin
         }
 
         private void btnAdd_user_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOld_TextChanged(object sender, EventArgs e)
         {
 
         }

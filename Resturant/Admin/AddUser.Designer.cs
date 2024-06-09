@@ -60,6 +60,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -133,7 +135,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(9, 9);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 19);
             this.button2.TabIndex = 7;
@@ -147,7 +149,7 @@
             this.rdoManager.AutoSize = true;
             this.rdoManager.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoManager.Location = new System.Drawing.Point(434, 211);
-            this.rdoManager.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoManager.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoManager.Name = "rdoManager";
             this.rdoManager.Size = new System.Drawing.Size(67, 27);
             this.rdoManager.TabIndex = 8;
@@ -159,11 +161,10 @@
             // 
             // rdoCustomer
             // 
-            this.rdoCustomer.AutoEllipsis = true;
             this.rdoCustomer.AutoSize = true;
             this.rdoCustomer.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoCustomer.Location = new System.Drawing.Point(277, 211);
-            this.rdoCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoCustomer.Name = "rdoCustomer";
             this.rdoCustomer.Size = new System.Drawing.Size(72, 27);
             this.rdoCustomer.TabIndex = 9;
@@ -178,7 +179,7 @@
             this.rdoChef.AutoSize = true;
             this.rdoChef.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoChef.Location = new System.Drawing.Point(362, 211);
-            this.rdoChef.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoChef.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoChef.Name = "rdoChef";
             this.rdoChef.Size = new System.Drawing.Size(50, 27);
             this.rdoChef.TabIndex = 10;
@@ -221,8 +222,8 @@
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(313, 47);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(384, 51);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 339);
             this.panel1.TabIndex = 11;
@@ -423,7 +424,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(37, 87);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(256, 263);
             this.pictureBox1.TabIndex = 12;
@@ -431,12 +432,36 @@
             this.pictureBox1.UseWaitCursor = true;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(381, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(512, 26);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "__________________________________________________";
+            this.label16.UseWaitCursor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(381, 392);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(512, 26);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "__________________________________________________";
+            this.label15.UseWaitCursor = true;
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(114)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1042, 450);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
@@ -449,6 +474,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -485,5 +511,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
     }
 }

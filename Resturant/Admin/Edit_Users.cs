@@ -312,8 +312,8 @@ namespace Resturant.Admin
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var addUser = new AddUser();
-            addUser.Show();
+          var opthns = new Options();
+            opthns.Show();
             this.Hide();
 
         }

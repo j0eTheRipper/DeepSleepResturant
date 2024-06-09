@@ -84,12 +84,6 @@
     <Compile Include="Admin\Edit_Users.Designer.cs">
       <DependentUpon>Edit_Users.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\FeedBack1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\FeedBack1.Designer.cs">
-      <DependentUpon>FeedBack1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Feed___Back.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +103,12 @@
       <DependentUpon>Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\User.cs" />
+    <Compile Include="Admin\view_sales2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\view_sales2.Designer.cs">
+      <DependentUpon>view_sales2.cs</DependentUpon>
+    </Compile>
     <Compile Include="chef\ChefMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,9 +246,6 @@
     <EmbeddedResource Include="Admin\Edit_Users.resx">
       <DependentUpon>Edit_Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\FeedBack1.resx">
-      <DependentUpon>FeedBack1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\Feed___Back.resx">
       <DependentUpon>Feed___Back.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\view_sales2.resx">
+      <DependentUpon>view_sales2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="chef\ChefMainPage.resx">
       <DependentUpon>ChefMainPage.cs</DependentUpon>

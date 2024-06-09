@@ -61,12 +61,90 @@ namespace Resturant
             }
             catch (Exception ex)
             {
-                // Log the exception or handle it as needed
+             
                 return false;
             }
         }
 
+       // The code below it shows the Feedback sent by Customers 
+        public static List<ListViewItem> GetFeedbackData()
+        {
+           var items = new List<ListViewItem>();
 
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("select * from Feedback", conn))
+                {
+                    SqlDataReader da = cmd.ExecuteReader();
+                    while (da.Read())
+                    {
+                        var item = new ListViewItem(da[0].ToString());
+                        item.SubItems.Add(da[1].ToString());
+                        item.SubItems.Add(da[2].ToString());
+                        item.SubItems.Add(da[3].ToString());
+                        item.SubItems.Add(da[4].ToString());
+                        items.Add(item);
+                    }
+                }
+            }
+            return items;
+        }
+
+
+    // The code below  To get the View  sales from multiple tables by using inner join //   
+          public static List<ListViewItem> GetSalesData()
+        {
+            List<ListViewItem> items = new List<ListViewItem>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = @"
+                SELECT
+                    o.customer,
+                    o.chef,
+                    o.totalPrice,
+                    o.date AS month,
+                    i.itemID,
+                    i.catagory AS category
+                FROM [Order] o
+                JOIN [Item] i ON o.customer = i.name;";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader["ItemID"].ToString());
+                        item.SubItems.Add(reader["customer"].ToString());
+                        item.SubItems.Add(reader["chef"].ToString());
+                        item.SubItems.Add(reader["totalPrice"].ToString());
+                        item.SubItems.Add(reader["category"].ToString());
+                        item.SubItems.Add(Convert.ToDateTime(reader["month"]).ToString("MM/yyyy"));
+                       
+                        items.Add(item);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error fetching sales data: " + ex.Message);
+
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+            return items;
+        }
+
+
+
+
+        // Delete Users from the Database
         public static bool DeleteUser(string username)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -78,6 +156,9 @@ namespace Resturant
                 int isChefdeleted = deleteChefinfo.ExecuteNonQuery();
                 SqlCommand deleteManagerInfo = new SqlCommand($"Delete from ManagersInfo where username = '{username}';",connection);
                 int isdeleteManagerInfo = deleteManagerInfo.ExecuteNonQuery();
+                SqlCommand deleteCustomerInfo = new SqlCommand($"Delete from Customer where username = '{username}';", connection);
+                int isdeleteCustomerInfo = deleteCustomerInfo.ExecuteNonQuery();
+                
 
                 if (x == 1)
                     return true;
@@ -89,8 +170,11 @@ namespace Resturant
 
 
 
+
         public static bool UpdateUserName(string oldUserName, string newUserName)
         {
+
+           
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -108,7 +192,7 @@ namespace Resturant
             }
             catch (Exception ex)
             {
-                // Handle exception ( log the error)
+                // Handle exception ( the error)
                 return false;
             }
         }
@@ -173,6 +257,8 @@ namespace Resturant
                 return null;
             }
         }
+
+
         public static Dictionary<string, string> GetSpecificUsers(string username)
         {
             bool is_found = false;
@@ -271,54 +357,10 @@ namespace Resturant
             }
         }
 
-        //public static List<User> GetAllFeedback()
-        //{
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        SqlCommand query = new SqlCommand($"SELECT ID, Feedback, Username, Service, Satisified, FROM Feedback", connection);
-        //        connection.Open();
-        //        SqlDataReader infof = query.ExecuteReader();
-        //        List<User> Feedback = new List<User>();
-        //        while (infof.Read())
-        //        {
-        //            User Feedback2 = new User
-        //            {
-        //                ID = infof.GetString(0),
-        //                Feedback = infof.GetString(1),
-        //                Username = infof.GetString(2),
-        //                Service = infof.GetString(3),
-        //                Satisified = infof.GetString(4),
-        //            };
-        //            Feedback.Add(Feedback2);
-        //        }
-        //        connection.Close();
-        //        return Feedback;
-        //    }
-        //}
+      
 
 
-
-        public static bool AddFeedback(string Feedback, string Username, string Service, string Satisfaction)
-        {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    SqlCommand addedfeed_back = new SqlCommand($"INSERT INTO Feedback (Feedback, Username, Service, Satisfaction) VALUES ('{Feedback}', '{Username}', '{Service}', '{Satisfaction}')",connection);
-                    int isfeedback_added = addedfeed_back.ExecuteNonQuery();
-                    connection.Close() ;
-                    return isfeedback_added == 1;
-                 
-                    
-                }
-            }
-            catch (Exception ex)
-            {
-             
-                return false;
-            }
-        }
+       
         public static bool AddManagerInfo(string username, string password, string role, string salary, string yearOfExper, string email)
         {
             try
@@ -336,7 +378,7 @@ namespace Resturant
             }
             catch (Exception ex)
             {
-                // Log the exception or handle it as needed
+            
                 return false;
             }
         }
@@ -357,7 +399,7 @@ namespace Resturant
             }
             catch (Exception ex)
             {
-                // Log the exception or handle it as needed
+              
                 return false;
             }
         }
@@ -379,7 +421,7 @@ namespace Resturant
             }
             catch (Exception ex)
             {
-                // Log the exception or handle it as needed
+                
                 return false;
             }
         }
