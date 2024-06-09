@@ -20,9 +20,11 @@ namespace Resturant.Customer
             InitializeComponent();
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
             {
-                SqlCommand cmd = new SqlCommand($"SELECT CustomerID FROM Customer WHERE username='{username}';", connection);
+                SqlCommand cmd = new SqlCommand($"SELECT CustomerID FROM Customer WHERE username=@name;", connection);
+                cmd.Parameters.AddWithValue("name", username);
                 connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
                 customerID = reader.GetInt32(0);
             }
         }

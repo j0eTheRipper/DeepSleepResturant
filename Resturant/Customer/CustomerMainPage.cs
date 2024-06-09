@@ -1,4 +1,5 @@
-﻿using Resturant.Customer;
+﻿using Resturant.Admin;
+using Resturant.Customer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,13 +48,13 @@ namespace Resturant
 
         private void Update_profile_Click(object sender, EventArgs e)
         {
-
+            Update UP2 = new Update();
+            UP2.Show();
         }
 
         private void View_order_Click(object sender, EventArgs e)
         {
-            cViewOrder CV2 = new cViewOrder(username);
-            CV2.Show();
+           
         }
 
         private void CustomerMainPage_Load(object sender, EventArgs e)

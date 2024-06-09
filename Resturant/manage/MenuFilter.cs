@@ -77,5 +77,11 @@ namespace Resturant.manage
             }
             cmbCatagoryFilter.SelectedIndex = 0;
         }
+
+        public Dictionary<string, string> GetItemInfo()
+        {
+            MenuItem item = new MenuItem(lstMenuItems.SelectedItem.ToString());
+            return new Dictionary<string, string>() { { "name", item.Name }, { "price", item.Price.ToString() } };
+        }
     }
 }
