@@ -48,28 +48,29 @@ namespace Resturant
             user = User.Login(txtUsername.Text, txtPassword.Text);
             if (user != null)
             {
+                Hide();
                 if (user.role == "admin")
                 {
                     Options admin_user = new Options();
-                    admin_user.Show();
+                    admin_user.ShowDialog();
                 }
                 else if (user.role == "customer")
                 {
                     CustomerMainPage customer_user = new CustomerMainPage();
-                    customer_user.Show();
+                    customer_user.ShowDialog();
                 }
                 else if (user.role == "manager")
                 {
                     ManagerMainPage managerMain = new ManagerMainPage();
-                    managerMain.Show();
+                    managerMain.ShowDialog();
                 } else if (user.role == "chef")
                 {
                     ChefMainPage chefMainPage = new ChefMainPage();
-                    chefMainPage.Show();
+                    chefMainPage.ShowDialog();
                 }
-                this.Hide();
+                Show();
             }
-            
+
         }
 
         private void btnLoginBehaviour(object sender, EventArgs e)
@@ -113,6 +114,18 @@ namespace Resturant
         private void chbxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = chbxShowPassword.Checked ? '\0' : '*';
+        }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("please enter your username and password");
+                return;
+            }
+            bool x = User.RegisterUser(txtUsername.Text, txtPassword.Text, $"{txtUsername.Text}@deepsleep.com", "customer");
+            if (x) MessageBox.Show("success");
+            else MessageBox.Show("Please try again with another username");
         }
     }
 }

@@ -105,7 +105,7 @@ namespace Resturant.chef
        
         public OrderView()
         {
-            connect = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mazin\\Source\\Repos\\iqxr36\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True";
+            connect = Properties.Settings.Default.YoussefConnection;
         }
 
         public DataTable GetOrders()    // Method to get all orders from the database

@@ -17,13 +17,15 @@ namespace Resturant
         public NewReservation()
         {
             InitializeComponent();
+            reservationDetails1.dntDate.MinDate = DateTime.Today;
         }
 
         private void NewReservation_Load(object sender, EventArgs e)
         {
+            lstCustomers.Items.Clear();
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.YoussefConnection))
             {
-                SqlCommand cmd = new SqlCommand("SELECT CustomerID, username FROM Customer WHERE reservation is null;", connection);
+                SqlCommand cmd = new SqlCommand("SELECT CustomerID, username FROM Customer WHERE reservation is null or reservation not in (select reservationID from reservations where reservationDate > GETDATE());", connection);
                 connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -41,8 +43,8 @@ namespace Resturant
             string outTime = reservationDetails1.EndTime;
             int numberOfPeople = reservationDetails1.NumberOfPeople;
             object username = lstCustomers.SelectedItem;
-            if (inTime == null || outTime == null || username == null || numberOfPeople == 0)
-                MessageBox.Show("please select a customer and specify a date and time");
+            if (inTime == null || outTime == null || username == null || numberOfPeople == 0 || DateTime.Parse(outTime) < DateTime.Parse(inTime))
+                MessageBox.Show("please select a customer and specify a date and a valid time");
             else
             {
                 Reservation reservation = new Reservation(customerIDs[(string) username], numberOfPeople, date, inTime, outTime);
@@ -51,7 +53,7 @@ namespace Resturant
                 {
                     reservation.UpdateReservationsTable(table);
                     bool isSuccess = reservation.UpdateCustomersTable();
-                    lstCustomers.Items.Remove(lstCustomers.SelectedItem);
+                    NewReservation_Load(sender, e);
                     if (isSuccess)
                         MessageBox.Show($"Successfully reserved table {table.TableID} for {(string) username}. Reservation will be at {date}, {inTime}.");
                     else

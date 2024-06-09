@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,10 +26,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -80,11 +80,36 @@
     <Compile Include="Admin\DeleteUser.Designer.cs">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Edit_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit_Users.Designer.cs">
+      <DependentUpon>Edit_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Feed___Back.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Feed___Back.Designer.cs">
+      <DependentUpon>Feed___Back.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Options.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\Options.Designer.cs">
       <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User.cs" />
+    <Compile Include="Admin\view_sales2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\view_sales2.Designer.cs">
+      <DependentUpon>view_sales2.cs</DependentUpon>
     </Compile>
     <Compile Include="chef\ChefMainPage.cs">
       <SubType>Form</SubType>
@@ -161,11 +186,11 @@
     <Compile Include="manage\AddCatagory.Designer.cs">
       <DependentUpon>AddCatagory.cs</DependentUpon>
     </Compile>
-    <Compile Include="manage\AddNewItem.cs">
+    <Compile Include="manage\EditOrAddItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="manage\AddNewItem.Designer.cs">
-      <DependentUpon>AddNewItem.cs</DependentUpon>
+    <Compile Include="manage\EditOrAddItem.Designer.cs">
+      <DependentUpon>EditOrAddItem.cs</DependentUpon>
     </Compile>
     <Compile Include="manage\Catagory.cs" />
     <Compile Include="manage\frmViewReservations.cs">
@@ -194,6 +219,12 @@
     <Compile Include="manage\ReservationDetails.Designer.cs">
       <DependentUpon>ReservationDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="manage\ReservationRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage\ReservationRequest.Designer.cs">
+      <DependentUpon>ReservationRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="manage\ViewAndEditItems.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,9 +233,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reservation.cs" />
+    <Compile Include="manage\Reservation.cs" />
     <Compile Include="Table.cs" />
-    <Compile Include="User.cs" />
     <EmbeddedResource Include="Admin\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -212,8 +242,20 @@
     <EmbeddedResource Include="Admin\DeleteUser.resx">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Edit_Users.resx">
+      <DependentUpon>Edit_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Feed___Back.resx">
+      <DependentUpon>Feed___Back.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\Options.resx">
       <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\view_sales2.resx">
+      <DependentUpon>view_sales2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="chef\ChefMainPage.resx">
       <DependentUpon>ChefMainPage.cs</DependentUpon>
@@ -248,8 +290,8 @@
     <EmbeddedResource Include="manage\AddCatagory.resx">
       <DependentUpon>AddCatagory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="manage\AddNewItem.resx">
-      <DependentUpon>AddNewItem.cs</DependentUpon>
+    <EmbeddedResource Include="manage\EditOrAddItem.resx">
+      <DependentUpon>EditOrAddItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manage\frmViewReservations.resx">
       <DependentUpon>frmViewReservations.cs</DependentUpon>
@@ -262,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manage\ReservationDetails.resx">
       <DependentUpon>ReservationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage\ReservationRequest.resx">
+      <DependentUpon>ReservationRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manage\ViewAndEditItems.resx">
       <DependentUpon>ViewAndEditItems.cs</DependentUpon>

@@ -12,6 +12,8 @@ namespace Resturant.manage
 {
     public partial class MenuFilter : UserControl
     {
+        public string SelectedMenuItem {get => lstMenuItems.SelectedItem != null ? lstMenuItems.SelectedItem.ToString() : null;}
+
         public MenuFilter()
         {
             InitializeComponent();
@@ -19,20 +21,25 @@ namespace Resturant.manage
 
         private void lstMenuItems_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lstMenuItems.SelectedItem == null)
+                return;
             MenuItem item = new MenuItem(lstMenuItems.SelectedItem.ToString());
             picMenuImage.Image = item.Image;
             lblPrice.Text = item.Price.ToString();
             lblName.Text = item.Catagory.ToString();
         }
 
+        public void Clear()
+        {
+            picMenuImage.Image = null;
+            lblPrice.Text = null;
+            lblName.Text = null;
+        }
+
         private void MenuFilter_Load(object sender, EventArgs e)
         {
             FillMenuListBox();
-
-            foreach (string catagoryName in Catagory.GetAll("Catagory"))
-            {
-                cmbCatagoryFilter.Items.Add(catagoryName);
-            }
+            FillCatagories();
         }
 
         private void cmbCatagoryFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,6 +65,17 @@ namespace Resturant.manage
             {
                 lstMenuItems.Items.Add(itemName);
             }
+        }
+
+        public void FillCatagories()
+        {
+            cmbCatagoryFilter.Items.Clear();
+            cmbCatagoryFilter.Items.Add("Show all");
+            foreach (string catagoryName in Catagory.GetAll("Catagory"))
+            {
+                cmbCatagoryFilter.Items.Add(catagoryName);
+            }
+            cmbCatagoryFilter.SelectedIndex = 0;
         }
     }
 }

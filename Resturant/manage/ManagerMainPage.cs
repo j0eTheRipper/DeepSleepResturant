@@ -1,4 +1,5 @@
-﻿using Resturant.manage;
+﻿using Resturant.Admin;
+using Resturant.manage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,32 +19,28 @@ namespace Resturant
             InitializeComponent();
         }
 
-        private void ManagerMainPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lnkReservation_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
-        }
-
-        private void lnkReserveForCustomer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            NewReservation newReservation = new NewReservation();
-            newReservation.ShowDialog();
-        }
-
         private void lnkReservationReport_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmViewReservations frm = new frmViewReservations();
+            Hide();
             frm.ShowDialog();
+            Show();
         }
 
         private void lnkMenu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ViewAndEditItems frmView = new ViewAndEditItems();
+            Hide();
             frmView.ShowDialog();
+            Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Update updateProfile = new Update();
+            Hide();
+            updateProfile.ShowDialog();
+            Show();
         }
     }
 }

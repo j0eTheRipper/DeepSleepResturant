@@ -111,7 +111,7 @@ namespace Resturant.chef
             // Constructor
             public ChefOrders()
             {
-                connect = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mazin\\Source\\Repos\\iqxr36\\DeepSleepResturant\\Resturant\\Database1.mdf;Integrated Security=True";
+                connect = Properties.Settings.Default.YoussefConnection;
             }
 
             public DataTable GetOrders()
@@ -128,7 +128,7 @@ namespace Resturant.chef
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error fetching orders: " + ex.Message);
+                    MessageBox.Show("Error fetching orders: " + ex.Message);
                 }
                 return DT;
             }
@@ -148,12 +148,17 @@ namespace Resturant.chef
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error updating order status: " + ex.Message);
+                    MessageBox.Show("Error updating order status: " + ex.Message);
                 }
             }
         }
 
         private void txtOrderId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataOfOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuFilter));
             this.cmbCatagoryFilter = new System.Windows.Forms.ComboBox();
             this.lstMenuItems = new System.Windows.Forms.ListBox();
-            this.picMenuImage = new System.Windows.Forms.PictureBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.picMenuImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picMenuImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,15 +58,6 @@
             this.lstMenuItems.TabIndex = 5;
             this.lstMenuItems.SelectedIndexChanged += new System.EventHandler(this.lstMenuItems_SelectedIndexChanged);
             // 
-            // picMenuImage
-            // 
-            this.picMenuImage.Location = new System.Drawing.Point(161, 13);
-            this.picMenuImage.Name = "picMenuImage";
-            this.picMenuImage.Size = new System.Drawing.Size(308, 199);
-            this.picMenuImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMenuImage.TabIndex = 6;
-            this.picMenuImage.TabStop = false;
-            // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
@@ -82,14 +74,27 @@
             this.lblName.Size = new System.Drawing.Size(0, 13);
             this.lblName.TabIndex = 11;
             // 
+            // picMenuImage
+            // 
+            this.picMenuImage.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.picMenuImage.Image = ((System.Drawing.Image)(resources.GetObject("picMenuImage.Image")));
+            this.picMenuImage.Location = new System.Drawing.Point(191, 13);
+            this.picMenuImage.Margin = new System.Windows.Forms.Padding(2);
+            this.picMenuImage.Name = "picMenuImage";
+            this.picMenuImage.Size = new System.Drawing.Size(272, 203);
+            this.picMenuImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMenuImage.TabIndex = 14;
+            this.picMenuImage.TabStop = false;
+            this.picMenuImage.UseWaitCursor = true;
+            // 
             // MenuFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.picMenuImage);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.cmbCatagoryFilter);
-            this.Controls.Add(this.picMenuImage);
             this.Controls.Add(this.lstMenuItems);
             this.Name = "MenuFilter";
             this.Size = new System.Drawing.Size(473, 249);
@@ -103,9 +108,9 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cmbCatagoryFilter;
-        private System.Windows.Forms.PictureBox picMenuImage;
         private System.Windows.Forms.ListBox lstMenuItems;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.PictureBox picMenuImage;
     }
 }
